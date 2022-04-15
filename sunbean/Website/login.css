@@ -65,6 +65,7 @@ body {
     width: 35%;
     margin-left: 10%;
     margin-top: 50px;
+  
   }
   
   .hero .container .texto_hero {
@@ -98,19 +99,22 @@ body {
   
   /* Conteúdo */
   .banner{
-    background-image: url('https://utech.com.br/site/wp-content/uploads/2019/07/background-empresa.jpg');
+    background-image: url("foto2.png");
     background-size: 100%;
     background-size: cover;
     width: 100%;
     height: 850px;
     opacity: 0.9;
+
 }
 
 .banner .container{
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding: 40px;
 }
 
 .banner .card{
@@ -139,6 +143,7 @@ input{
     height: 30px;
     border-radius: 10px;
     margin: 5px;
+    padding-left: 10px;
 }
 
 h4{
