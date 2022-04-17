@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  font-family: 'Segoe UI',   Tahoma,
+   Geneva, Verdana, sans-serif;
 }
 
 /* Header */
@@ -13,10 +15,6 @@ body {
   height: 80px;
 }
 
-.active {
-  color: rgb(17, 201, 63);
-  font-weight: bold;
-}
 
 .header .container {
   display: flex;
@@ -31,9 +29,14 @@ body {
   list-style: none;
   justify-content: space-evenly;
   padding: 0;
-  width: 600px;
+  width: 500px;
   align-items: center;
   text-decoration: none;
+}
+.agora {
+  font-weight: bolder;
+  font-size: +20px;
+  color: rgb(17, 201, 63);
 }
 
 li a {
@@ -45,8 +48,10 @@ li a {
   transition: 0.7s;
   color: rgb(17, 201, 63);
   font-weight: bolder;
-  font-size: +21px; 
+  font-size: +20px; 
 }
+
+
 
 /* Banner */
 .hero {

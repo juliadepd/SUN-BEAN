@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI',   Tahoma,
+    Geneva, Verdana, sans-serif;
+    background-color: rgb(105, 105, 105);
+  }
+  
+  /* Header */
+  .header {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: roboto;
+    border-bottom: 1px solid rgb(216, 216, 216);
+  }
+  
+  .header img {
+    height: 80px;
+  }
+  
+  .agora {
+    color: rgb(17, 201, 63);
+    font-weight: bold;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    margin-left: 10%;
+  }
+  
+  .navbar {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 0;
+    width: 600px;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+  }
+  
+  .header a:hover {
+    transition: 0.7s;
+    color: rgb(17, 201, 63);
+    font-weight: bolder;
+    font-size: +21px; 
+  }
+  
+  /* conteudo da empresa*/
+
+  .container1 {
+    height: 80vh;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+  }
+  .banner{
+    margin: 0.5%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(105, 105, 105);
+    /*background-image: url("quem-somos\ 2.png");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+  }
+  .banner img{
+    width: 22%;
+    height: 22%;
+  }
+  
+  .box_txt {
+    height: 80px;
+    padding: 0;
+    width: 60%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-left: 20%;
+    justify-content: space-around;
+    font-family: roboto;
+  }
+
+  .box_txt p{
+    color: aliceblue;
+    font-size: 25px;
+  }
+
+  
+  /* Conteúdo */
+  .valores{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .valores img{
+    width: 200px;
+    height: 200px;
+  }
+  
+  .valores .container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 600px;
+  }
+  
+  .card{
+    display: flex;
+    margin: auto;
+    width: 33.3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .card2{
+    display: flex;
+    margin: auto;
+    width: 33.3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .card3{
+    display: flex;
+    margin: auto;
+    width: 33.3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .valores p{
+    text-align: center;
+    font-size: 20px;
+    width: 350px;
+  }
+  
+  /* Footer */
+  
+  .footer {
+    background-color: #201e1e;
+    font-family: roboto;
+    color: white;
+    font-size: 12px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer .container {
+    width: 90%;
+    height: 40%;
+  }
+  
+  .footer .container .left {
+    float: left;
+    width: 38.1%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .footer .container .center {
+    float: left;
+    width: 38.3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .footer .container .right {
+    float: left;
+    width: 23.1%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .right .icones {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .icones img {
+    height: 25px;
+  }
