@@ -5,11 +5,11 @@ use sunbean;
 create table cliente (
 idCliente int primary key auto_increment,
 nomeCliente varchar(45),
-email varchar(45),
+email varchar(45) unique,
 senha varchar(45),
-CPF char(14),
-CNPJ char(18),
-telCelular char(12),
+CPF char(14) unique,
+CNPJ char(18) unique,
+telCelular char(12) unique,
 dataCadastro date
 );
 
