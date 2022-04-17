@@ -1,19 +1,19 @@
 body {
-    margin: 0;
-  }
+  margin: 0;
+}
 
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 12px;               /* largura de todo o espaçamento */
 }
 
 body::-webkit-scrollbar-track {
-  background: rgb(133, 132, 131);        /* color of the tracking area */
+  background: black;        /* cor do caminho do scroll */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(17, 201, 63);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
- 
+  background-color: white;   /* cor do scroll */
+  border-radius: 20px;       /* arredondar a borda */
+  border: 2px solid rgb(0, 0, 0);  /* tamanho da borda */
 }
   
   /* Header */
@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb {
     color: rgb(59, 59, 59);
   }
   
-  .header a:hover {
+  .header .navbar a:hover {
     transition: 0.7s;
     color: rgb(17, 201, 63);
     font-weight: bolder;
@@ -65,7 +65,9 @@ body::-webkit-scrollbar-thumb {
   .banner{
       height: 760px;
       background-image: url("Depositphotos_158202126_DS.jpg");
-
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
   }
   .banner .container{
       margin: auto;
