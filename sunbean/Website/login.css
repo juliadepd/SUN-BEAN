@@ -144,6 +144,11 @@ body::-webkit-scrollbar-thumb {
     
 }
 
+.banner a{
+  text-decoration: none; 
+  color: white; 
+  } 
+
 .form-box{
     display: flex;
     flex-direction: column;
@@ -188,6 +193,7 @@ h4{
     height: 30px;
     width: 60%;
 }
+
 
 span {
     margin-bottom: 20px;
