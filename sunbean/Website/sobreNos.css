@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI',   Tahoma,
     Geneva, Verdana, sans-serif;
-    background-color: rgb(105, 105, 105);
+   /* background-color: darkgrey;*/
   }
   
   /* Header */
@@ -43,7 +43,7 @@ body {
   
   li a {
     text-decoration: none;
-    color: rgb(59, 59, 59);
+    color: rgb(0, 0, 0);
   }
   
   .header a:hover {
@@ -56,23 +56,24 @@ body {
   /* conteudo da empresa*/
 
   .container1 {
-    height: 80vh;
+    height: 160vh;
     padding: 0;
     margin: 0;
     width: 100%;
+   /* background-color: rgb(150, 150, 150);*/
 
   }
   .banner{
-    margin: 0.5%;
+    margin-top: 1%;
     padding: 0;
     justify-content: center;
     align-items: center;
-    background-color: rgb(105, 105, 105);
-    /*background-image: url("quem-somos\ 2.png");*/
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
+    position: relative;
   }
   .banner img{
     width: 22%;
@@ -80,23 +81,34 @@ body {
   }
   
   .box_txt {
-    height: 80px;
+    height: 40vh;
     padding: 0;
-    width: 60%;
+    margin: 0;
+    width: 100%;
     display: flex;
     align-self: center;
     align-items: center;
-    margin-top: 7%;
-    margin-left: 20%;
     justify-content: space-around;
     font-family: roboto;
+    color: black;
+    background-color: rgb(255, 255, 255);
   }
 
   .box_txt p{
-    color: aliceblue;
+    color: black;
     font-size: 25px;
   }
 
+  .banner_func{
+    padding: 0;
+    margin: 0;
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(180deg,white, rgb(64, 240, 108));
+    /*background-color: rgb(83, 238, 122);*/
+    display: flex;
+    justify-content: space-between;
+  }
   
   /* Conteúdo */
   .valores{
