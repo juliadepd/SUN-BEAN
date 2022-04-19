@@ -4,46 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.css" />
-    <link rel="icon" type="imagem/png" href="icone titulo.jpg">
-    <title>Sunbean | Login</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="imagem/png" href="../Identidade Visual/favicon.ico">
+    <title>Sunbean - Entrar</title>
   </head>
 
   <body>
     <!-- Header -->
     <div class="header">
       <div class="container">
-        <a href="home.html"><img src="../Identidade Visual/Logo PNG.png" /></a>
+        <a href="index.html"><img src="../Identidade Visual/Logo PNG.png" /></a>
         <ul class="navbar">
-          <li><a href="calculadora.html">Simular</a></li>|
-          <li><a href="sobreNos.html">Sobre Nós</a></li>|
-          <li><a href="cadastro.html">Cadastrar</a></li>|
-          <li><u>Entrar</u></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="calculadora.html">Simular</a></li>
+          <li><a href="sobreNos.html">Sobre Nós</a></li>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li class="active"><a href="login.html">Entrar</a></li>
         </ul>
       </div>
     </div>
-    <div class="banner">
-      <div class="container">
-          <div class="card">
-              <h2>Bem-Vindo(a)</h2>
-              <div class="form-box">
 
-                  <h4>Nome de usuário ou e-mail: </h4>
-                  <input class="input_usuario" type="text" placeholder="Usuário ou e-mail">
-
-                  <h4>Senha: </h4>
-                  <input class="input_senha" type="password" placeholder="Senha">
-
-                  <div class="botoes">
-                      <button class="botao" onclick="registrar()">Entrar</button>
-                      <button class="botao" onclick="cadastro()">Cadastrar</button>
-                      <a href="../Website/esqueceusenha.html"><span>Esqueceu a senha?</span></a>
-                  </div>
-                  
-              </div>
-          </div>
-      </div>
-  </div>
+    <!-- Conteúdo -->
+    <p style="text-align: center;">em manutenção por jonathan</p>
 
     <!-- Footer -->
     <div class="footer">
@@ -64,21 +47,13 @@
         <div class="right">
           <p>Siga-nos nas redes sociais!</p>
           <div class="icones">
-            <a href=""><img src="../Identidade Visual/Twitter.png" /></a>
-            <a href="https://www.facebook.com/Sun-Bean-107283795294201"><img src="../Identidade Visual/Facebook.png" /></a>
-            <a href="https://instagram.com/sun_bean2022?igshid=YmMyMTA2M2Y="><img src="../Identidade Visual/Instagram.png" /></a>
-            <a href=""><img src="../Identidade Visual/Linkedin.png" /></a>
+            <img src="../Identidade Visual/Twitter.png" />
+            <img src="../Identidade Visual/Facebook.png" />
+            <img src="../Identidade Visual/Instagram.png" />
+            <img src="../Identidade Visual/Linkedin.png" />
           </div>
         </div>
       </div>
     </div>
-    
-    
   </body>
 </html>
-
-<script>
-  function cadastro(){
-    window.location.href = "cadastro.html"
-  }
-</script>

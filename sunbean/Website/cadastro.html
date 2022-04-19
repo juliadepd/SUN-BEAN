@@ -1,156 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="cadastro.css" />
+    <link rel="icon" type="imagem/png" href="../Identidade Visual/favicon.ico">
+    <title>Sunbean - Cadastro</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="cadastro.css" />
-  <link rel="icon" type="imagem/png" href="icone titulo.jpg">
-  <title>Sunbean | Cadastro</title>
-</head>
-
-<body>
-  <!-- Header -->
-  <div class="header">
-    <div class="container">
-      <a href="home.html"><img src="../Identidade Visual/Logo PNG.png" /></a>
-      <ul class="navbar">
-        <li><a href="calculadora.html">Simular</a></li>|
-        <li><a href="sobreNos.html">Sobre Nós</a></li>|
-         <li><u>Cadastrar</u></li>|
-        <li><a href="login.html">Entrar</a></li>
-      </ul>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="container">
+        <a href="index.html"><img src="../Identidade Visual/Logo PNG.png" /></a>
+        <ul class="navbar">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="calculadora.html">Simular</a></li>
+          <li><a href="sobreNos.html">Sobre Nós</a></li>
+          <li class="active"><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="login.html">Entrar</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="banner">
-    <div class="container">
-      <div class="card">
-        <h2>Junte se à Sun Bean!</h2>
 
-        <div class="ipts_cadastro">
+    <!-- Conteúdo -->
+    <div class="conteudo">
+      <!-- bloco esquerdo -->
+      <div class="leftbox">
+        <div class="container">
+          <img
+            id="logo_monocromatica"
+            src="../Identidade Visual/Logo PNG monocromatica.png"
+          />
+        </div>
+        <div class="container2">
+          <p id="texto_left">
+            Alguns cliques de distância até você ter seus dados na palma de sua
+            mão
+          </p>
+        </div>
+        <div class="container3">
+          <img id="img_cadastro" src="../Identidade Visual/cadastro_img.png" />
+        </div>
+      </div>
 
-          <div class="nome">
-            <input class="ipt_nome" placeholder="Nome"></input>
-            <input class="ipt_nome" placeholder="Sobrenome"></input>
+      <!-- bloco direito -->
+      <div class="rightbox">
+        <div class="container">
+          <p id="texto_cadastro">Cadastro Pessoal</p>
+        </div>
+
+        <div class="container2">
+          <div class="bloco_esquerdo">
+            <p>Nome Completo</p>
+            <input placeholder="Nome completo" type="text" />
+            <p>Número de Telefone</p>
+            <input placeholder="(00) 00000-0000" type="tel" />
+            <p>Senha</p>
+            <input placeholder="Inserir Senha" type="password" />
           </div>
 
-          <div class="inputs">
-            <input class="ipt" placeholder="E-mail"></input>
+          <div class="bloco_direito">
+            <p>CPF</p>
+            <input placeholder="000.000.000-00" type="text" />
+            <p>Email</p>
+            <input placeholder="Exemplo@hotmail.com" type="email" />
+            <p>Confirmar Senha</p>
+            <input placeholder="Repetir Senha" type="password" />
           </div>
+        </div>
 
-          <div class="inputs">
-            <input class="ipt" placeholder="Usuário"></input>
-          </div>
-
-          <div class="inputs">
-            <input class="ipt" placeholder="Senha"></input>
-          </div>
-
-          <div class="inputs">
-            <input class="ipt" placeholder="CPF"></input>
-          </div>
-
-          <div class="inputs">
-            <input class="ipt" placeholder="CNPJ">
-          </div>
-
-          <div class="div_nasc">
-            <h4>Data de nascimento: </h4>
-            <select class="select_nasc">
-              <option value="1">1</option>
-              <option value="1">2</option>
-              <option value="1">3</option>
-              <option value="1">4</option>
-              <option value="1">5</option>
-              <option value="1">6</option>
-              <option value="1">7</option>
-              <option value="1">8</option>
-              <option value="1">9</option>
-              <option value="1">10</option>
-              <option value="1">11</option>
-              <option value="1">12</option>
-              <option value="1">13</option>
-              <option value="1">14</option>
-              <option value="1">15</option>
-              <option value="1">16</option>
-              <option value="1">17</option>
-              <option value="1">18</option>
-              <option value="1">19</option>
-              <option value="1">20</option>
-              <option value="1">21</option>
-              <option value="1">22</option>
-              <option value="1">23</option>
-              <option value="1">24</option>
-              <option value="1">25</option>
-              <option value="1">26</option>
-              <option value="1">27</option>
-              <option value="1">28</option>
-              <option value="1">29</option>
-              <option value="1">30</option>
-              <option value="1">31</option>
-            </select>
-            <select class="select_nasc">
-              <option value="1">Janeiro</option>
-              <option value="1">Fevereiro</option>
-              <option value="1">Março</option>
-              <option value="1">Abril</option>
-              <option value="1">Maio</option>
-              <option value="1">Junho</option>
-              <option value="1">Julho</option>
-              <option value="1">Agosto</option>
-              <option value="1">Setembro</option>
-              <option value="1">Outubro</option>
-              <option value="1">Novembro</option>
-              <option value="1">Dezembro</option>
-            </select>
-
-            <input class="ipt_ano" type="number" step="1" min="1900" max="2020" value="1990">
-
-            <div class="div_button">
-              <button onclick="button_cadastro()">Cadastre-se</button>
+        <div class="container3">
+          <div class="bloco_esquerdo2">
+            <div id="check1">
+              <input type="checkbox" />Sim, desejo receber emails da sunbean
+            </div>
+            <div id="check2">
+              <input type="checkbox" />Li e concordo com os termos de uso
             </div>
           </div>
+
+          <div class="bloco_direito2">
+            <button>Cadastrar</button>
+          </div>
+        </div>
+        <br />
+        <div class="container4">
+          <span id="possui_conta">Já possui uma conta? </span>
+          <a id="login_btn" href="login.html"> Entrar</a>
+        </div>
+
+        <div class="divisoria"></div>
+        <br />
+        <span id="ou">OU</span><br />
+        <div class="container5">
+          <img src="../Identidade Visual/icon google.png" />
+          <img src="../Identidade Visual/icon facebook.png" />
+          <img src="../Identidade Visual/icon twitter.png" />
         </div>
       </div>
     </div>
-  </div>
 
-   <!-- Footer -->
-   <div class="footer">
-    <div class="container">
-      <div class="left">
-        <p>Sunbean SA | CNPJ: 60.746.948.0001-12</p>
-        <p>PORTABILIDADE | TRABALHE CONOSCO | SEGURANÇA | INVESTIDORES</p>
-      </div>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="left">
+          <p>Sunbean SA | CNPJ: 60.746.948.0001-12</p>
+          <p>PORTABILIDADE | TRABALHE CONOSCO | SEGURANÇA | INVESTIDORES</p>
+        </div>
 
-      <div class="center">
-        <p>Cidade De Deus, S/Nº Vila Yara | Osasco | SP | CEP: 06029-900</p>
-        <p>
-          Copyright © 2020-2022 Sunbean Company S.L. Todos os direitos
-          reservados.
-        </p>
-      </div>
+        <div class="center">
+          <p>Cidade De Deus, S/Nº Vila Yara | Osasco | SP | CEP: 06029-900</p>
+          <p>
+            Copyright © 2020-2022 Sunbean Company S.L. Todos os direitos
+            reservados.
+          </p>
+        </div>
 
-      <div class="right">
-        <p>Siga-nos nas redes sociais!</p>
-        <div class="icones">
-          <a href=""><img src="../Identidade Visual/Twitter.png" /></a>
-          <a href="https://www.facebook.com/Sun-Bean-107283795294201"><img src="../Identidade Visual/Facebook.png" /></a>
-          <a href="https://instagram.com/sun_bean2022?igshid=YmMyMTA2M2Y="><img src="../Identidade Visual/Instagram.png" /></a>
-          <a href=""><img src="../Identidade Visual/Linkedin.png" /></a>
+        <div class="right">
+          <p>Siga-nos nas redes sociais!</p>
+          <div class="icones">
+            <img src="../Identidade Visual/Twitter.png" />
+            <img src="../Identidade Visual/Facebook.png" />
+            <img src="../Identidade Visual/Instagram.png" />
+            <img src="../Identidade Visual/Linkedin.png" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
-
-<script>
-  function button_cadastro() {
-    window.location.href = "login.html"
-
-  }
-</script>

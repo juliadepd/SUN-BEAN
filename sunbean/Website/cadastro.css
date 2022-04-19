@@ -1,225 +1,229 @@
-body {
+/* tela */
+.conteudo {
+  height: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    #c4c4c4,
+    #e9e9e9
+  );
+  justify-content: center;
+}
+
+/* bloco de conteúdo esquerdo */
+.leftbox {
+  background-color: #5bb553;
+  height: 550px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#logo_monocromatica {
+  height: 110%;
+  margin-left: 10px;
+}
+
+#texto_left {
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 28px;
+}
+
+#img_cadastro {
+  margin-top: 30px;
+  height: 80%;
+}
+
+.leftbox .container {
+  width: 100%;
+  height: 10%;
+}
+
+.leftbox .container2 {
+  width: 80%;
+  height: 30%;
+}
+
+.leftbox .container3 {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+/* bloco de conteúdo direito */
+.rightbox {
+  background-color: rgb(255, 255, 255);
+  height: 550px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.rightbox input {
+  background-color: rgb(207, 207, 207);
+  border-radius: 4px;
+  border: 0;
+  height: 25px;
+  width: 240px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.rightbox .container2 p {
   margin: 0;
 }
 
-body::-webkit-scrollbar {
-  width: 12px;               /* largura de todo o espaçamento */
+#texto_cadastro {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  margin-bottom: 15px;
 }
 
-body::-webkit-scrollbar-track {
-  background: black;        /* cor do caminho do scroll */
+.rightbox .container {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  align-items: flex-end;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: white;   /* cor do scroll */
-  border-radius: 20px;       /* arredondar a borda */
-  border: 2px solid rgb(0, 0, 0);  /* tamanho da borda */
-}
-  
-  /* Header */
-  .header {
-    background-color: rgb(255, 255, 255);
-    font-family: roboto;
-    border-bottom: 1px solid rgb(216, 216, 216);
-  }
-  
-  .header img {
-    height: 80px;
-  }
-
-  .active {
-    color: rgb(17, 201, 63);
-    font-weight: bold;
-  }
-  
-  .header .container {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    height: 100%;
-    margin-left: 10%;
-  }
-  
-  .navbar {
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    padding: 0;
-    width: 600px;
-    align-items: center;
-    text-decoration: none;
-  }
-  
-  li a {
-    text-decoration: none;
-    color: rgb(59, 59, 59);
-  }
-  
-  .header .navbar a:hover {
-    transition: 0.7s;
-    color: rgb(17, 201, 63);
-    font-weight: bolder;
-    font-size: +21px; 
-  }
-
-  .banner{
-      height: 760px;
-      background-image: url("Depositphotos_158202126_DS.jpg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-  }
-  .banner .container{
-      margin: auto;
-      width: 80%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-
-  }
-
-  .card{
-    padding: 20px;
-    height: 65%;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-top: 15px;
-    background-color: rgba(53, 58, 55, 0.801);
-    border-radius: 8px;
-    flex-direction: column;
-  }
-  h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 1000;
-    color:rgb(255, 255, 255);
-  }
-  .ipts_cadastro{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
-    margin-top: 15px;
-  }
-  .ipt{
-    width: 100% ;
-    padding-left: 10px;
-  }
-
-.ipt_nome{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    margin-right: auto;
-    padding-left: 10px;
-}
-.nome{
+.rightbox .container2 {
+  width: 80%;
+  height: 40%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 5px;
-  width: 100%;
-}
-.inputs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 5px;
-}
-input{
-  height: 30px;
-  border-radius: 7px;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h4{
-  margin: 0%;
-  padding: 0%;
-  color: aliceblue;
-}
-.select_nasc{
-  height: 30px;
-  border-radius: 7px;
-  width: 130px;
-  margin-top: 5px;
+.rightbox .bloco_esquerdo {
+  width: 50%;
+  height: 100%;
+  color: #37474f;
 }
 
-.ipt_ano{
-  height: 27px;
-  border-radius: 7px;
-  width: 97px;
+.rightbox .bloco_esquerdo p {
+  margin-top: 16px;
 }
 
-.div_button{
-  height: 100px;
+.rightbox .bloco_direito p {
+  margin-top: 16px;
+}
+
+.rightbox .bloco_direito {
+  width: 50%;
+  height: 100%;
+  color: #37474f;
+  margin-left: 50px;
+}
+
+.rightbox .container3 {
+  width: 80%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+.rightbox .bloco_esquerdo2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #3a3636;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.bloco_esquerdo2 input {
+  margin: 0;
+  width: 20px;
+  margin-right: 10px;
+  border: 0;
+}
+
+#check1 {
+  display: flex;
+  align-items: center;
+}
+
+#check2 {
+  display: flex;
+  align-items: center;
+}
+
+.rightbox .bloco_direito2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.bloco_direito2 button {
+  height: 50px;
+  width: 160px;
+  background-color: #5bb553;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.rightbox .container4 {
+  width: 80%;
+  height: 5%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-button{
-  height: 30px;
-  width: 60%;
-  border-radius: 7px ;
-  background-color: black;
-  color: white;
+/* Já possui uma conta? */
+
+#possui_conta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* Footer */
-  
-.footer {
-  background-color: #201e1e;
-  font-family: roboto;
-  color: white;
-  font-size: 12px;
-  height: 150px;
-  width: 100%;
+#login_btn {
+  color: #5bb553;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+}
+
+.divisoria {
+  width: 50%;
+  height: 1px;
+  border-bottom: 1px rgb(197, 197, 197) solid;
+}
+
+.container5 {
+  width: 150px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer .container {
-  width: 90%;
-  height: 40%;
-}
-
-.footer .container .left {
-  float: left;
-  width: 38.1%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-}
-
-.footer .container .center {
-  float: left;
-  width: 38.3%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.footer .container .right {
-  float: left;
-  width: 23.1%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.right .icones {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+#ou {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: grey;
 }
-
-.icones img {
-  height: 25px;
-}
-
