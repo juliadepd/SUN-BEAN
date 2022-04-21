@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css global/estilo.css" />
+    <link rel="stylesheet" href="cadastro.css" />
+    <link rel="icon" type="imagem/png" href="../../Identidade Visual/favicon.ico">
+    <title>Sunbean | Cadastro</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="container">
+        <a href="../Home/index.html"><img src="../../Identidade Visual/Logo PNG.png" /></a>
+        <ul class="navbar">
+          <li><a href="../Home/index.html">Inicio</a></li>
+          <li><a href="../Calculadora/Calculadora.html">Simular</a></li>
+          <li><a href="../sobreNos/sobreNos.html">Sobre Nós</a></li>
+          <li class="active">Cadastrar</li>
+          <li><a href="../Login/login.html">Entrar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="conteudo">
+      <!-- bloco esquerdo -->
+      <div class="leftbox">
+        <div class="container">
+          <img
+            id="logo_monocromatica"
+            src="../../Identidade Visual/Logo PNG monocromatica.png"
+          />
+        </div>
+        <div class="container2">
+          <p id="texto_left">
+            Alguns cliques de distância até você ter seus dados na palma de sua
+            mão
+          </p>
+        </div>
+        <div class="container3">
+          <img id="img_cadastro" src="../../Identidade Visual/cadastro_img.png" />
+        </div>
+      </div>
+
+      <!-- bloco direito -->
+      <div class="rightbox">
+        <div class="container">
+          <p id="texto_cadastro">Cadastro Pessoal</p>
+        </div>
+
+        <div class="container2">
+          <div class="bloco_esquerdo">
+            <p>Nome Completo</p>
+            <input placeholder="Nome completo" type="text" />
+            <p>Número de Telefone</p>
+            <input placeholder="(00) 00000-0000" type="tel" />
+            <p>Senha</p>
+            <input placeholder="Inserir Senha" type="password" />
+          </div>
+
+          <div class="bloco_direito">
+            <p>CPF</p>
+            <input placeholder="000.000.000-00" type="text" />
+            <p>Email</p>
+            <input placeholder="Exemplo@hotmail.com" type="email" />
+            <p>Confirmar Senha</p>
+            <input placeholder="Repetir Senha" type="password" />
+          </div>
+        </div>
+
+        <div class="container3">
+          <div class="bloco_esquerdo2">
+            <div id="check1">
+              <input type="checkbox" />Sim, desejo receber emails da sunbean
+            </div>
+            <div id="check2">
+              <input type="checkbox" />Li e concordo com os termos de uso
+            </div>
+          </div>
+
+          <div class="bloco_direito2">
+            <button onclick="cadastro()">Cadastrar</button>
+          </div>
+        </div>
+        <br />
+        <div class="container4">
+          <span id="possui_conta">Já possui uma conta? </span>
+          <a id="login_btn" href="../Login/login.html"> Entrar</a>
+        </div>
+
+        <div class="divisoria"></div>
+        <br />
+        <span id="ou">OU</span><br />
+        <div class="container5">
+          <a href="https://accounts.google.com/signin/v2/identifier?hl=pt-br&flowName=GlifWebSignIn&flowEntry=ServiceLogin"> <img src="../../Identidade Visual/icon google.png" /></a>
+          <a href="https://pt-br.facebook.com/"><img src="../../Identidade Visual/icon facebook.png" /></a>
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><img src="../../Identidade Visual/icon twitter.png" /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="left">
+          <p>Sunbean SA | CNPJ: 60.746.948.0001-12</p>
+          <p>PORTABILIDADE | TRABALHE CONOSCO | SEGURANÇA | INVESTIDORES</p>
+        </div>
+
+        <div class="center">
+          <p>Cidade De Deus, S/Nº Vila Yara | Osasco | SP | CEP: 06029-900</p>
+          <p>
+            Copyright © 2020-2022 Sunbean Company S.L. Todos os direitos
+            reservados.
+          </p>
+        </div>
+
+        <div class="right">
+          <p>Siga-nos nas redes sociais!</p>
+          <div class="icones">
+            <a href=""><img src="../../Identidade Visual/Twitter.png" /></a>
+            <a href="https://www.facebook.com/Sun-Bean-107283795294201"><img src="../../Identidade Visual/Facebook.png" /></a>
+            <a href="https://instagram.com/sun_bean2022?igshid=YmMyMTA2M2Y="><img src="../../Identidade Visual/Instagram.png" /></a>
+            <a href=""><img src="../../Identidade Visual/Linkedin.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function cadastro(){
+    window.location.href= ""
+  }
+</script>
