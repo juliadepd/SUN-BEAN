@@ -1,5 +1,5 @@
 .conteudo {
-    height: 130vh;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
@@ -29,12 +29,14 @@
 
   .rightbox {
     background-color: rgb(255, 255, 255);
-    height: 900px;
+    height: auto;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .conteiner{
@@ -54,7 +56,6 @@
         margin: 0;
         font-size: 28px;
   }
-
 
   .inputs{
       display: flex;
@@ -102,19 +103,3 @@
       color: rgb(17, 201, 63);
       font-weight: 1000;
     }
-
-
-  /*@keyframes expand-h {
-    from {
-      height: 550px ;
-    }
-  
-    to {
-        height: 650px ;
-    }
-  }
-
-  .expend-h{
-    height: 650px !important;
-      animation: expand-h 1s;
-  }/*

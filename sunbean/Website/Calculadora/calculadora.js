@@ -13,9 +13,6 @@ function calcular_botao() {
     var lucrocomparado_formatado = lucrocomparado.toLocaleString("pt-BR", {
       style:'currency', currency: "BRL",
     });
-    
-    //var elemento = document.getElementById("segunda_div");
-    //elemento.classList.add("expend-h")
 
     frase.innerHTML = `<p>Previsões para a produtividade da soja no Brasil:<br>
                        <br> Em razão das recentes mudanças climáticas observadas no território brasileiro, especialistas estimam
@@ -32,7 +29,7 @@ function calcular_botao() {
   
                        Ao confiar na nossa solução, você poderá obter um ganho de até <b>${lucrocomparado_formatado}</b> a mais, nesta safra. <br>
                        <br>
-                       <a href="cadastro.html"> Cadastre-se</a> e saiba mais!</p>`;
+                       <a href="../Cadastro/cadastro.html"> Cadastre-se</a> e saiba mais!</p>`;
 
   }
   
