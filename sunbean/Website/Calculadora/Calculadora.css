@@ -69,6 +69,10 @@
       margin: 0;
   }
 
+  input{
+    padding-left: 10px;
+  }
+
   button {
     background-color: #5bb553;
     border: 0;
