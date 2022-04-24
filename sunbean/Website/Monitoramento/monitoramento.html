@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="monitoramento.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="lateral">
+    <div class="container">
+      <img class="foto" src="user-soja-emporio.png">
+      <div class="username">
+        <h1>Soja Empório</h1>
+        <h2>Usuário Titular</h2>
+      </div>
+      <ul class="navbar">
+        <li class="active"><u>Monitoramento</u></li>
+        <li><a href="registros.html">Registros</a></li>
+        <li><a href="../sobreNos/sobres.html">Plano</a></li>
+        <li><a href="../Login/login.h">Suporte</a></li>
+      </ul>
+      <div class="logout">
+        <li><a href="../Login/login.html">Sair</a></li>
+        <img class="sair" src="iconelogout.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="ola">
+      <img class="idvisual" src="../../Identidade Visual/Logo PNG.png">
+      <div class="separador"></div>
+      <h4>Olá, <b>Emporio da Soja</b>. Seja bem-vindo!</h4>
+    </div>
+
+    <div class="container">
+      <div class="temporeal">
+        <div class="div_dashboard">
+          <div>
+            <canvas id="grafico_linha" style="position: relative; height:80vh; width:40vw"></canvas>
+          </div>
+        </div>
+
+        <div class="div_dashboard">
+          <div>
+            <canvas id="grafico_barra" style="position: relative; height:80vh; width: 40vw"></canvas>
+          </div>
+        </div>
+
+        <div class="estado">
+          <h1>
+            TEMPERATURA
+          </h1>
+          <a href=""></a>
+          <div class="info">Excedida em 2 graus</div>
+          <img src="alerta.png" class="alerta">
+        </div>
+
+        <div class="estado2">
+          <h1>UMIDADE</h1>
+          <a href=""></a>
+          <div class="info">5 gramas abaixo do adequado</div>
+          <img src="alerta.png" class="alerta">
+        </div>
+
+      </div>
+      <div class="embaixo">
+        <div class="div_compreenda">
+          <h1>
+            Realize a irrigação e registre o alerta em: <a href="registros.html">Registros</a>
+          </h1>
+        </div>
+
+      </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+  const horario = [
+    '13:35'
+  ];
+
+
+  const dataLinha = {
+    labels: horario,
+    datasets: [{
+      label: 'Temperatura agora',
+      backgroundColor: '#3d7738',
+      borderColor: '#3d7738',
+      data: [32, 24, 32,],
+    }]
+  };
+
+  const dataBarra = {
+    labels: horario,
+    datasets: [{
+      label: 'Umidade agora',
+      backgroundColor: 'rgb(8, 92, 74)',
+      borderColor: 'rgb(8, 92, 74)',
+      data: [45, 43, 50],
+    }]
+  };
+
+  const configLinha = {
+    type: 'line',
+    data: dataLinha,
+    options: {}
+  };
+  const configBarra = {
+    type: 'line',
+    data: dataBarra,
+    options: {}
+  };
+</script>
+
+<script>
+  const grafico_linha = new Chart(
+    document.getElementById('grafico_linha'),
+    configLinha
+  );
+
+  const grafico_barra = new Chart(
+    document.getElementById('grafico_barra'),
+    configBarra
+  );
+</script>
