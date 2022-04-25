@@ -1,17 +1,17 @@
 function calcular_botao() {
-    var hect = Number(qtd_hectares.value);
-    var saca = Number(cotacao_saca_soja.value);
-    var safraanterior = Number(lucro_safra_anterior.value);
-  
-    var perda = safraanterior * 0.26; // 26% é a estimativa de perda comparada com o ano passado
-    var perda_formatada = perda.toLocaleString("pt-BR", {style:'currency', currency: "BRL" }); // formatação para moeda "real brasileira"
+  var hect = Number(qtd_hectares.value);
+  var saca = Number(cotacao_saca_soja.value);
+  var safraanterior = Number(lucro_safra_anterior.value);
+
+    var perda = safraanterior * 0.26 // 26% é a estimativa de perda comparada com o ano passado
+    var perda_formatada = perda.toLocaleString("pt-BR", { style: 'currency', currency: "BRL" }); // formatação para moeda "real brasileira"
     var lucroestimado = saca * hect * 55; // lucro que ele vai ter sem o nosso sitema ( numero de sacas previsto para esta safra, por hectares)
     var lucrocomparado = (saca * hect * 80) - lucroestimado; // lucro que ele vai ter com a nossa solução a mais
     var lucroestimado_formatado = lucroestimado.toLocaleString("pt-BR", {
-      style:'currency', currency: "BRL",
+      style: 'currency', currency: "BRL",
     });
     var lucrocomparado_formatado = lucrocomparado.toLocaleString("pt-BR", {
-      style:'currency', currency: "BRL",
+      style: 'currency', currency: "BRL",
     });
 
     frase.innerHTML = `<p>Previsões para a produtividade da soja no Brasil:<br>
@@ -32,4 +32,4 @@ function calcular_botao() {
                        <a href="../Cadastro/cadastro.html"> Cadastre-se</a> e saiba mais!</p>`;
 
   }
-  
+
