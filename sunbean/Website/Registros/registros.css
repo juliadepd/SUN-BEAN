@@ -87,11 +87,13 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    list-style: none;
   }
 
   .logout li a{
     font-size: large;
   }
+
   .sair {
     width: 35px;
     margin-left: 10px;
@@ -120,9 +122,9 @@ body {
 }
 
 .ola {
-  background-color: #ffffff6c;
+  background-color: #e9e9e9;
   height: 50px;
-  width: 40%;
+  width: 45%;
   display: flex;
   align-items: center;
   border-bottom-right-radius: 7px;
