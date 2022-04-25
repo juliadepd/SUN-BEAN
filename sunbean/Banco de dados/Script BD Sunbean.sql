@@ -20,6 +20,7 @@ create table Usuario (
 idUsuario int primary key auto_increment,
 nome_rs varchar(45),
 cpf_cnpj varchar(14),
+telefone char(11),
 email varchar(50),
 senha varchar(45),
 confSenha varchar(45),
@@ -28,10 +29,12 @@ foreign key (fkTitular) references Usuario (idUsuario)
 );
 
 insert into Usuario values 
-(null,'Empório da Soja','19513382869529','negocio@emporiosoja.com','SS245255!@','SS245255!@',null),
-(null,'Safra Century','24452682869523','safra@century.com','Emp#2594','Emp#2594',null),
-(null,'Marcos','19513382869','marcos.baldin@emporiosoja.com','MARCOS25041970','MARCOS25041970', 1),
-(null,'Andreia','52903134863','andreia.nascimento@emporiosoja.com','@9644555210!','@9644555210!', 1);
+(null,'Empório da Soja','19513382869529','11980144388','negocio@emporiosoja.com','SS245255!@','SS245255!@',null),
+(null,'Safra Century','24452682869523','11957247658','safra@century.com','Emp#2594','Emp#2594',null),
+(null,'Marcos','19513382869','12954916705','marcos.baldin@emporiosoja.com','MARCOS25041970','MARCOS25041970', 1),
+(null,'Andreia','52903134863','2199452462','andreia.nascimento@emporiosoja.com','@9644555210!','@9644555210!', 1);
+
+select * from usuario where telefone like '%7%';
 
 select * from usuario;
 -- selecionar usuários secundários e não secundários + titulares
