@@ -54,20 +54,20 @@
         <div class="container2">
           <div class="bloco_esquerdo">
             <p>Nome Completo ou Razão Social</p>
-            <input placeholder="Inserir Nome ou Razão Social" type="text" />
+            <input id="input_nome_razao" placeholder="Inserir Nome ou Razão Social" type="text" />
             <p>Número de Telefone</p>
-            <input placeholder="(00) 00000-0000" type="tel" />
+            <input id="input_tel" placeholder="(00) 00000-0000" type="tel" />
             <p>Senha</p>
-            <input placeholder="Inserir Senha" type="password" />
+            <input id="input_senha" placeholder="Inserir Senha" type="password" />
           </div>
 
           <div class="bloco_direito">
             <p>CPF ou CNPJ</p>
-            <input placeholder="Inserir CPF ou CNPJ" type="text" />
+            <input id="input_cpf_cnpj" placeholder="Inserir CPF ou CNPJ" type="text" />
             <p>Email</p>
-            <input placeholder="Exemplo@hotmail.com" type="email" />
+            <input id="input_email" placeholder="Exemplo@hotmail.com" type="email" />
             <p>Confirmar Senha</p>
-            <input placeholder="Repetir Senha" type="password" />
+            <input id="input_repetir_senha" placeholder="Repetir Senha" type="password" />
           </div>
         </div>
 
@@ -82,7 +82,7 @@
           </div>
 
           <div class="bloco_direito2">
-            <a href="../Monitoramento/monitoramento.html"><button>Cadastrar</button></a>
+            <a><button onclick="validCadastro()">Cadastrar</button></a>
           </div>
         </div>
         <br />
@@ -131,3 +131,13 @@
     </div>
   </body>
 </html>
+
+<script>
+function validCadastro() {
+  if (input_nome_razao.value == '' || input_tel.value == '' || input_senha.value == '' || input_cpf_cnpj.value == '' || input_email.value == '' || input_repetir_senha.value == '') {
+alert('Por favor preencha todos os campos')
+  } else {
+    window.location.href = '../Monitoramento/monitoramento.html'
+  }
+}
+  </script>

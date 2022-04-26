@@ -45,12 +45,12 @@
 
         <div>
           <p class="texto_inputs">E-mail</p>
-          <input class="input_texto" type="text" placeholder="Exemplo@hotmail.com" />
+          <input id="input_email_login" class="input_texto" type="text" placeholder="Exemplo@hotmail.com" />
         </div>
 
         <div class="senha">
           <p class="texto_inputs">Senha</p>
-          <input class="input_texto" type="password" placeholder="Inserir Senha" />
+          <input id="input_senha_login" class="input_texto" type="password" placeholder="Inserir Senha" />
         </div>
 
         <div class="LembrarUsuario_EsqueceuSenha">
@@ -59,7 +59,7 @@
         </div>
 
         <div>
-          <a href="../Monitoramento/monitoramento.html"><button id="btn_entrar">Entrar</button></a>
+          <button id="btn_entrar" onclick="validLogin()">Entrar</button>
         </div>
 
         <div class="div_cadastrar">
@@ -108,3 +108,12 @@
 </body>
 
 </html>
+<script>
+  function validLogin() {
+    if (input_email_login.value == '' || input_senha_login == '') {
+  alert('Por favor preencha todos os campos')
+    } else {
+      window.location.href="../Monitoramento/monitoramento.html"
+    }
+  }
+    </script>
