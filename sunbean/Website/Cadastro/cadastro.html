@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css global/estilo.css" />
     <link rel="stylesheet" href="cadastro.css" />
+    <script src="cadastro.js"></script>
     <link rel="icon" type="imagem/png" href="../../Identidade Visual/favicon.ico">
     <title>Sunbean | Cadastro</title>
   </head>
@@ -52,10 +53,10 @@
           <p id="texto_cadastro">Cadastro</p>
         </div>
 
-        <div class="container2">
+        <div class="container2" id="idcontainer2">
           <div class="bloco_esquerdo">
             <p>Nome Completo ou Razão Social</p>
-            <input id="input_nome_razao" placeholder="Inserir Nome ou Razão Social" type="text" />
+            <input id="input_nome_razao" placeholder="Inserir Nome ou Razão Social" type="text"/>
             <p>Número de Telefone</p>
             <input id="input_tel" placeholder="(00) 00000-0000" type="tel" />
             <p>Senha</p>
@@ -72,6 +73,10 @@
           </div>
         </div>
 
+        <!-- Frase de erro de validação -->
+        <span id="span_validacao"></span>
+
+        <!-- Bloco inferior (checkbox e botão cadastrar) -->
         <div class="container3">
           <div class="bloco_esquerdo2">
             <div id="check1">
@@ -87,6 +92,8 @@
           </div>
         </div>
         <br />
+
+        <!-- Login com redes sociais -->
         <div class="container4">
           <span id="possui_conta">Já possui uma conta? </span>
           <a id="login_btn" href="../Login/login.html"> Entrar</a>
@@ -132,13 +139,3 @@
     </div>
   </body>
 </html>
-
-<script>
-function validCadastro() {
-  if (input_nome_razao.value == '' || input_tel.value == '' || input_senha.value == '' || input_cpf_cnpj.value == '' || input_email.value == '' || input_repetir_senha.value == '') {
-alert('Por favor preencha todos os campos')
-  } else {
-    window.location.href = '../Monitoramento/monitoramento.html'
-  }
-}
-  </script>
