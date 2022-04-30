@@ -12,9 +12,22 @@
     justify-content: center;
   }
 
+#validacao {
+  display: flex;
+  justify-content: center;
+}
+
+  #span_validacao {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: -10px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
   .leftbox {
     background-image: linear-gradient(to bottom, rgba(31, 201, 107, 0.050), rgba(0, 0, 0, 0.6)),
-    url('fundoo.png');
+    url('../../Identidade Visual/fundoo.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

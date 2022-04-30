@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css global/estilo.css" />
   <link rel="stylesheet" href="../Login/login.css" />
+  <script src="login.js"></script>
   <link rel="icon" type="imagem/png" href="../../Identidade Visual/favicon.ico" />
   <title>Sunbean | Entrar</title>
 </head>
@@ -52,6 +53,10 @@
         <div class="senha">
           <p class="texto_inputs">Senha</p>
           <input id="input_senha_login" class="input_texto" type="password" placeholder="Inserir Senha" />
+        </div>
+
+        <div id="validacao">
+        <span id="span_validacao"></span>
         </div>
 
         <div class="LembrarUsuario_EsqueceuSenha">
@@ -109,12 +114,3 @@
 </body>
 
 </html>
-<script>
-  function validLogin() {
-    if (input_email_login.value == '' || input_senha_login == '') {
-  alert('Por favor preencha todos os campos')
-    } else {
-      window.location.href="../Monitoramento/monitoramento.html"
-    }
-  }
-    </script>
