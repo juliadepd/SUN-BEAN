@@ -19,6 +19,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     border: 1px solid black;
+    border-radius: 8px
 }
 
 .titulo{
@@ -44,6 +45,8 @@ h1{
 
 .frase{
     margin-top: 40px;
+    margin-left: 80px;
+    width: 50%;
     height: auto;
 }
 
@@ -64,6 +67,7 @@ h3{
 }
 
 .card1{
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,14 +109,14 @@ h3{
 }
 
 #segundo_card img{
-    width: 100px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: -10px;
 }
 
 #terceiro_card img{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 #terceiro_card{

@@ -1,6 +1,6 @@
 function opcao1(){
 
-    texto.innerHTML = `<p>Caso tenha esquecido sua senha, acesse <a target="_blank" class="active" href="..//.html">"Esqueceu sua senha?"</a></p> `
+    texto.innerHTML = `<p>Caso tenha esquecido sua senha, acesse <a target="_blank" class="active" href="../esqueceu a senha/esqueceu.html">"Esqueceu sua senha?"</a></p> `
 }
 
 function opcao2(){
