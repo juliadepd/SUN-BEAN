@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css global/estilo.css" />
+  <link rel="stylesheet" href="../esqueceu a senha/esqueceu.css" />
+  <link rel="icon" type="imagem/png" href="../../Identidade Visual/favicon.ico" />
+  <title>Sunbean | Senha</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <a href="../Home/index.html"><img src="../../Identidade Visual/Logo PNG.png" /></a>
+      <ul class="navbar">
+        <li><a href="../Home/index.html">Inicio</a></li>
+        <li><a href="../Calculadora/Calculadora.html">Simular</a></li>
+        <li><a href="../Cadastro/cadastro.html">Cadastrar</a></li>
+        <li>Entrar</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="conteudo">
+    <!-- bloco esquerdo -->
+    <div class="leftbox">
+    </div>
+
+    <!-- bloco direito -->
+    <div class="rightbox">
+      <div class="container_right">
+        <img id="logo_right" src="../../Identidade Visual/Logo PNG.png" />
+      </div>
+
+      <div class="container_right2">
+        <p id='texto_login'>Esqueceu a senha?</p>
+
+        <div>
+          <p class="texto_inputs">E-mail</p>
+          <input id="input_email_login" class="input_texto" type="text" placeholder="Exemplo@hotmail.com" />
+        </div>
+
+        <div class="senha">
+          <p class="texto_inputs">Telefone</p>
+          <input id="input_senha_login" class="input_texto" placeholder="Inserir numero de telefone" />
+        </div>
+        <div class="LembrarUsuario_EsqueceuSenha">
+          <span id="span_esqueceuSenha">Lembrou sua senha?</span>
+        </div>
+
+        <div>
+          <button id="btn_entrar" onclick="validLogin()">Enviar Solicitação</button>
+        </div>
+
+        <div class="div_cadastrar">
+          Não possui uma conta ainda? <a href="../Cadastro/cadastro.html" id="a_cadastrar">Faça parte da Sunbean</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="left">
+        <p>Sunbean SA | CNPJ: 60.746.948.0001-12</p>
+        <p>PORTABILIDADE | TRABALHE CONOSCO | SEGURANÇA | INVESTIDORES</p>
+      </div>
+
+      <div class="center">
+        <p>Cidade De Deus, S/Nº Vila Yara | Osasco | SP | CEP: 06029-900</p>
+        <p>
+          Copyright © 2020-2022 Sunbean Company S.L. Todos os direitos
+          reservados.
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Siga-nos nas redes sociais!</p>
+        <div class="icones">
+          <a target="_blank" href=""><img src="../../Identidade Visual/Twitter.png" /></a>
+          <a target="_blank" href="https://www.facebook.com/Sun-Bean-107283795294201"><img src="../../Identidade Visual/Facebook.png" /></a>
+          <a target="_blank" href="https://instagram.com/sun_bean2022?igshid=YmMyMTA2M2Y="><img src="../../Identidade Visual/Instagram.png" /></a>
+          <a target="_blank" href=""><img src="../../Identidade Visual/Linkedin.png" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  function validLogin() {
+      window.location.href="../esqueceu a senha/validação_esqueceu.html"
+
+  }
+    </script>
