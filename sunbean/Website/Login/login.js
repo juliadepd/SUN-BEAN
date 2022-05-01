@@ -27,11 +27,17 @@ function validLogin() {
         input_email_login.border = "none"
         input_senha_login.style.border = "none"
 
-        /* Valida se o email possui "@" e mais de 10 caracteres */
+        /* Valida se o email possui mais de 10 caracteres */
         if (input_email_login.value.length < 10) {
             input_email_login.style.border = "thin solid #FF0000"
             input_senha_login.style.border = "none"
-            span_validacao.innerHTML = 'Email inválido, deve conter "@" e no mínimo 10 digitos'
+            span_validacao.innerHTML = 'Email inválido, deve conter no mínimo 10 digitos'
+        }
+
+        /* Valida se o email possui "@" */
+        else if (input_email_login.value.indexOf("@") == -1) {
+          input_email_login.style.border = "thin solid #FF0000"
+          span_validacao.innerHTML = 'Email inválido, deve conter "@"'
         }
 
         /* Valida se a senha tem mais de 10 caracteres */

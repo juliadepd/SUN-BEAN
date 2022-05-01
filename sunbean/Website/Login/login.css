@@ -148,6 +148,11 @@
    font-weight: 500;
  }
 
+ #nao_possui_conta {
+   margin: 0;
+  font-weight: 400;
+ }
+
  #a_cadastrar {
    color: #5bb553;
    margin-left: 10px;
