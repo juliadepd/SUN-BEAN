@@ -120,10 +120,12 @@
 
  #span_esqueceuSenha {
    font-size: 12px;
-   color: #5bb553;
-   font-weight: bold;
    cursor: pointer;
  }
+
+#span_esqueceuSenha a{
+  color: #5bb553;
+}
 
  #btn_entrar {
    width: 100%;

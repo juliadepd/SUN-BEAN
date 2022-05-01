@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css global/estilo.css" />
-  <link rel="stylesheet" href="../esqueceu a senha/validação_esqueceu.css" />
+  <link rel="stylesheet" href="../Validação Esqueceu a senha/validação_esqueceu.css" />
   <link rel="icon" type="imagem/png" href="../../Identidade Visual/favicon.ico" />
   <title>Sunbean | Senha</title>
 </head>
@@ -30,6 +30,7 @@
   <div class="conteudo">
     <!-- bloco esquerdo -->
     <div class="leftbox">
+      <img src="../../Identidade Visual/Reset password-amico.png" style="width: 500px; height: 500px;" alt="">
     </div>
 
     <!-- bloco direito -->
@@ -42,15 +43,20 @@
       </div>
 
       <div class="texto_inputs">
-            <input class="input_a" style="width: 40px; height: 60px; margin: 3px;" maxlength="1"><input class="input_b" style="width: 40px; height: 60px; margin: 3px;" maxlength="1"><input class="input_c" style="width: 40px; height: 60px; margin: 3px;" maxlength="1"><input class="input_d" style="width: 40px; height: 60px; margin: 3px;" maxlength="1"><input class="input_e" style="width: 40px; height: 60px; margin: 3px;" maxlength="1"><input class="input_f" style="width: 40px; height: 60px; margin: 3px;" maxlength="1">
+            <input class="input_a" maxlength="1">
+            <input class="input_a" maxlength="1">
+            <input class="input_a" maxlength="1">
+            <input class="input_a" maxlength="1">
+            <input class="input_a" maxlength="1">
+            <input class="input_a" maxlength="1">
       </div>
 
-        <div>
+        <div class="botao">
           <button id="btn_entrar" onclick="validLogin()">Validar Codigo</button>
         </div>
 
         <div class="div_cadastrar">
-          Não possui uma conta ainda? <a href="../Cadastro/cadastro.html" id="a_cadastrar">Faça parte da Sunbean</a>
+          <p>Não possui uma conta ainda? <a href="../Cadastro/cadastro.html" id="a_cadastrar">Faça parte da Sunbean</a></p>
         </div>
       </div>
     </div>
@@ -88,10 +94,6 @@
 </html>
 <script>
   function validLogin() {
-    if (input_email_login.value == '' || input_senha_login == '') {
-  alert('Por favor preencha todos os campos')
-    } else {
-      window.location.href="../Monitoramento/monitoramento.html"
-    }
+      window.location.href="../Login/login.html"
   }
     </script>

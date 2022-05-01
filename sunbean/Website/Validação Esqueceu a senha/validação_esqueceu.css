@@ -12,19 +12,6 @@
     justify-content: center;
   }
 
-  .leftbox {
-   background-image: url(../esqueceu\ a\ senha/reset\ password-amico.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 500px;
-    width: 45%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    display: flex;
-    align-items: flex-end;
-  }
-
   #texto_left {
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -95,14 +82,21 @@
    cursor: pointer;
  }
 
- #btn_entrar {
+ .botao{
+   display: flex;
    width: 100%;
+   align-items: center;
+   justify-content: center;
+ }
+
+ #btn_entrar {
+   width: 130px;
    background-color: #5bb553;
    color: white;
    border: 0;
-   border-radius: 4px;
+   border-radius: 20px;
    height: 30px;
-   margin-top: 15px;
+   margin-top: 30px;
    font-weight: bold;
    cursor: pointer;
  }
@@ -148,26 +142,15 @@
   margin-top: 15px;
  }
 
- .input_a{
-     border-radius: 12px;
+ .texto_inputs{
+   margin-top: 15px;
  }
 
-.input_b{
+ .input_a{
+   font-size: 20px;
+    text-align: center;
     border-radius: 12px;
-}
-
-.input_c{
-    border-radius: 12px;
-}
-
-.input_d{
-    border-radius: 12px;
-}
-
-.input_e{
-    border-radius: 12px;
-}
-
-.input_f{
-    border-radius: 12px;
-}
+    width: 40px; 
+    height: 60px; 
+    margin: 3px;
+ }

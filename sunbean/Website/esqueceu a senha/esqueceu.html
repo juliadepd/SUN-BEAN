@@ -51,7 +51,7 @@
           <input id="input_senha_login" class="input_texto" placeholder="Inserir numero de telefone" />
         </div>
         <div class="LembrarUsuario_EsqueceuSenha">
-          <span id="span_esqueceuSenha">Lembrou sua senha?</span>
+          <span id="span_esqueceuSenha"><a href="../Login/login.html">Lembrou sua senha?</a></span>
         </div>
 
         <div>
@@ -97,7 +97,10 @@
 </html>
 <script>
   function validLogin() {
-      window.location.href="../esqueceu a senha/validação_esqueceu.html"
-
+    if (input_email_login.value == '' || input_senha_login == '') {
+  alert('Por favor preencha todos os campos')
+    } else {
+      window.location.href="../Validação Esqueceu a senha/validação_esqueceu.html"
+    }
   }
     </script>
