@@ -57,7 +57,7 @@ a{
   color: rgb(59, 59, 59);
 }
 
-a:hover {
+.navbar a:hover {
   transition: 0.5s;
   color: rgb(17, 201, 63);
   font-weight: bolder;

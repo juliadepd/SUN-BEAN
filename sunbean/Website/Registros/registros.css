@@ -1,12 +1,13 @@
 body {
   display: flex;
+  margin: 0%;
 }
 
 .lateral {
   background-color: #5bb553;
   width: 15%;
   height: 600px;
-  border-top-left-radius: 10px;
+  border-top-left-radius: 0px;
   border-bottom-left-radius: 10px;
   float: left;
   font-family: Arial, Helvetica, sans-serif;
@@ -126,9 +127,9 @@ body {
   height: 50px;
   width: 45%;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   border-bottom-right-radius: 7px;
-  justify-content: space-evenly;
   box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
 }
 

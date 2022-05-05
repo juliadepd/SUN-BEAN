@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plantacoes.css">
+    <link rel="stylesheet"
+        href="C:\Users\judur\OneDrive\Área de Trabalho\sprint 3\SUN-BEAN\sunbean\Website\css global\estilo.css">
+    <link rel="icon"
+        href="C:\Users\judur\OneDrive\Área de Trabalho\sprint 3\SUN-BEAN\sunbean\Identidade Visual\favicon.ico">
+    <title>SunBean | Plantações</title>
+</head>
+
+<body>
+    <div class="lateral">
+        <div class="container">
+            <img class="foto" src="../../Identidade Visual/user-soja-emporio.png">
+            <div class="username">
+                <h1>Soja Empório</h1>
+                <h2>Usuário Titular</h2>
+            </div>
+            <ul class="navbarra">
+                <li><a href="C:\Users\judur\OneDrive\Área de Trabalho\sprint 3\SUN-BEAN\sunbean\Website\Monitoramento\monitoramento.html">Monitoramento</a></li>
+                <li><a href="../Registros/registros.html">Registros</a></li>
+                <li class="ativa">Plantações</li>
+                <li><a href="#">Acesso</a></li>
+            </ul>
+            <div class="logout">
+                <li><a href="../Login/login.html">Sair</a></li>
+                <img class="sair" src="../../Identidade Visual/iconelogout.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="ola">
+            <img class="idvisual" src="../../Identidade Visual/Logo PNG.png">
+            <div class="separador"></div>
+            <h4>Olá, <b>Emporio da Soja</b>. Seja bem-vindo(a)!</h4>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="leftbox">
+                    <div class="div_1">
+                        <img src="C:\Users\judur\OneDrive\Área de Trabalho\sprint 3\SUN-BEAN\sunbean\Identidade Visual\Logo PNG monocromatica copy.png"
+                            class="logo_mono">
+                    </div>
+                    <div class="div_2">
+                        <p class="texto1">Para poder solicitar a instalação dos sensores na sua plantação, conte-nos um
+                            pouco sobre ela --> </p>
+                    </div>
+                    <div class="div_3">
+                        <img src="C:\Users\judur\OneDrive\Área de Trabalho\sprint 3\SUN-BEAN\sunbean\Identidade Visual\Business deal-bro.png"
+                            class="imagem_cadastro">
+                    </div>
+                </div>
+                <div class="rightbox" id="right_box">
+
+                    <p class="texto_cadastro">Cadastro de plantação</p>
+
+                    <div class="conjunto_ipts">
+
+                        <div class="div_ipts">
+                            <p>Nome ou identificação</p><input type="text" id="ipt_nome"
+                                placeholder="Exemplo: 'Plantação1'">
+                            <p>Hectares plantados</p><input type="number" id="ipt_hectares"
+                                placeholder="Quantidade de hectares">
+                        </div>
+
+                        <div class="div_ipts">
+                            <p>CEP do local</p><input type="text" id="ipt_cep" placeholder="00000-000">
+                            <p>Número do local</p><input type="number" id="ipt_numero" placeholder="Exemplo: '1024'">
+                        </div>
+                    </div>
+
+                    <div class="botao">
+                        <button onclick="cadastrar()">Cadastrar plantação</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="texto_2">Plantações cadastradas:</p>
+
+        </div>
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        var nome = ipt_nome.value
+        var hectares = Number(ipt_hectares.value)
+        var cep = ipt_cep.value
+        var numero = ipt_numero.value
+
+        right_box.innerHTML =
+
+            `<div class='div_cima'>
+                <div id='div_plantacao'></div>
+                <img id= confirma >
+                </div>
+                <div class= 'tudo_certo'> 
+                Tudo certo!<br> 
+                <br>Entre em 
+                <span onclick="contact()">
+                    <u>contato</u>
+                </span> 
+                conosco para solicitar a instalação dos sensores nesta plantação <br><br>
+                <span onclick="refresh()">
+                   <u>Cadastre outra plantação</u>
+                </span>
+             </div>`
+
+        confirma.src = `confirma.png`
+        div_plantacao.innerHTML = `<b>${nome}</b><br>
+        ${hectares} hectares<br>
+        CEP: ${cep}<br>
+        Número: ${numero}`
+
+    }
+
+    function refresh() {
+        window.location.reload()
+    }
+</script>
