@@ -82,10 +82,10 @@ function validCadastro() {
       span_validacao.innerHTML = 'Valor inválido, digite um valor de 11 (cpf) ou 14 (cnpj) numeros'
       }
 
-    /* Valida se o número de telefone possui ao menos 8 digitos */
-    else if (input_tel.value.length < 8) {
+    /* Valida se o número de telefone possui ao menos 10 digitos */
+    else if (input_tel.value.length < 10) {
     input_tel.style.border = "thin solid #FF0000"
-    span_validacao.innerHTML = 'Telefone deve conter no mínimo 8 digitos'
+    span_validacao.innerHTML = 'Telefone deve conter no mínimo 10 digitos'
     }
 
     /* Valida se a senha tem mais de 8 caracteres */
