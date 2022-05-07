@@ -12,6 +12,14 @@
     justify-content: center;
   }
 
+  #span_validacao {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: -10px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
   .leftbox {
    background-image: url('../../Identidade Visual/esquecido.png');
     background-position: center;

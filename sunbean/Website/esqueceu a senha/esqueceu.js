@@ -1,4 +1,4 @@
-function validLogin() {
+function validEsqueceu() {
     
     /* verifica se há algum input vazio */
     if (input_email_login.value == '' || input_senha_login.value == '') {
@@ -44,7 +44,7 @@ function validLogin() {
           else if (input_senha_login.value.length < 8) {
             input_senha_login.style.border = "thin solid #FF0000"
             input_email_login.style.border = "none"
-            span_validacao.innerHTML = 'Senha deve conter no mínimo 8 digitos'
+            span_validacao.innerHTML = 'Telefone deve conter no mínimo 8 digitos'
         }
 
         /* Confirma o login e abre a tela de monitoramento */

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css global/estilo.css" />
   <link rel="stylesheet" href="../esqueceu a senha/esqueceu.css" />
   <link rel="icon" type="imagem/png" href="../../Identidade Visual/favicon.ico" />
+  <script src="esqueceu.js"></script>
   <title>Sunbean | Senha</title>
 </head>
 
@@ -49,13 +50,16 @@
         <div class="senha">
           <p class="texto_inputs">Telefone</p>
           <input id="input_senha_login" class="input_texto" placeholder="Inserir numero de telefone" />
+        
+          <span id="span_validacao"></span>
+
         </div>
         <div class="LembrarUsuario_EsqueceuSenha">
           <span id="span_esqueceuSenha"><a href="../Login/login.html">Lembrou sua senha?</a></span>
         </div>
 
         <div>
-          <button id="btn_entrar" onclick="validLogin()">Enviar Solicitação</button>
+          <button id="btn_entrar" onclick="validEsqueceu()">Enviar Solicitação</button>
         </div>
 
         <div class="div_cadastrar">
@@ -95,12 +99,3 @@
 </body>
 
 </html>
-<script>
-  function validLogin() {
-    if (input_email_login.value == '' || input_senha_login == '') {
-  alert('Por favor preencha todos os campos')
-    } else {
-      window.location.href="../Validação Esqueceu a senha/validação_esqueceu.html"
-    }
-  }
-    </script>
