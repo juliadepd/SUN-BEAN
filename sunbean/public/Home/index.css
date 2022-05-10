@@ -1,0 +1,237 @@
+/* Banner */
+.hero {
+    background-color: rgb(202, 202, 202);
+    height: 542px;
+    width: 100%;
+    background-image: url("../assets/Identidade Visual/hero_banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+  }
+  
+  .hero .container {
+    height: 60%;
+    width: 35%;
+    margin-left: 10%;
+    margin-top: 50px;
+  }
+  
+  .hero .container .texto_hero {
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+  }
+  
+  .hero .container .texto_hero_descricao {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    color: #979797;
+  }
+
+  button a{
+      color: white;
+  }
+  
+  .hero button {
+    background-color: #5bb553;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    width: 120px;
+    color: white;
+    margin-top: 25px;
+  }
+  
+  .hero button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 25px rgba(0, 255, 0, 0.705);
+    cursor: pointer;
+  }
+  
+  /* Conteúdo */
+  html{
+    scroll-behavior: smooth;
+  }
+  .valores{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+   }
+  
+  .valores img{
+    width: 200px;
+    height: 200px;
+  }
+  
+  .valores .container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 600px;
+  }
+  
+  .card{
+    display: flex;
+    margin: auto;
+    width: 33.3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .card2{
+    display: flex;
+    margin: auto;
+    width: 33.3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .card3{
+    display: flex;
+    margin: auto;
+    width: 33.3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .valores p{
+    text-align: center;
+    font-size: 20px;
+    width: 350px;
+  }
+
+  .sobre_nos{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 130px;
+  }
+  .sobre_nos h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .sobre_nos h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .nossa_existencia{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 180px;
+  }
+  .nossa_existencia h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .nossa_existencia h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .banner_perfil {
+    padding: 0;
+    margin-top: 40px;
+    height: 450px;
+    width: 100%;
+    background-color:white ;
+    display: flex;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    justify-content: space-around;
+  }
+  
+  .banner_perfil2 {
+    padding: 0;
+    margin-top: 0px;
+    height: 450px;
+    width: 100%;
+    background-color:white ;
+    display: flex;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    justify-content: space-around;
+  }
+  
+  .perfil_position {
+    max-width: 70%;
+    display: flex;
+    margin: auto;
+  }
+  
+  .perfil {
+    align-content: center;
+    text-align: center;
+    width: 200px;
+    max-height: 230px;
+    padding: 10px;
+    margin-top: 5%;
+    border-radius: 7%;
+    background-color: rgb(201, 201, 201);
+  }
+  
+  .perfil_ft {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+  
+  .perfil_nome {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .perfil2{
+    align-content: center;
+    text-align: center;
+    width: 200px;
+    max-height: 230px;
+    padding: 10px;
+    border-radius: 7%;
+    background-color: rgb(201, 201, 201);
+  }
+
+  .controler h2{
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .sobre_nos .container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+  .sobre_nos img{
+  height: 200px;
+  width: 200px;
+  }
+
+.texto_span{
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .nossa_existencia .container{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  }
+  .nossa_existencia img{
+  height: 200px;
+  width: 200px;
+  }
+
+  

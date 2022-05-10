@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registros.css">
+    <link rel="icon" type="imagem/png" href="../assets/Identidade Visual/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>SunBean | Registros</title>
+</head>
+
+<body>
+    <div class="lateral">
+        <div class="container">
+            <img class="foto" src="../assets/Identidade Visual/userbarbara.jpg">
+            <div class="username">
+                <h1>Barbara Ferrari</h1>
+                <h2>Usuário Secundário</h2>
+            </div>
+            <ul class="navbar">
+                <li><a href="../Monitoramento/monitoramento.html">Monitoramento</a></li>
+                <li class="active"><u>Registros</u></li>
+                <li><a href="../Plantações/plantacoes.html">Plantações</a></li>
+                <li><a href="#">Acesso</a></li>
+            </ul>
+            <div class="logout">
+                <li><a href="../Login/login.html">Sair</a></li>
+                <img class="sair" src="../assets/Identidade Visual/iconelogout.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="ola">
+            <img class="idvisual" src="../assets/Identidade Visual/Logo PNG.png">
+            <div class="separador"></div>
+            <h4>Olá, <b>Barbara</b>. Seja bem-vindo(a)!</h4>
+        </div>
+
+        <div class="container">
+            <div class="embaixo">
+                <div class="registros">
+                    <span class="texto" id="texto">
+                        <div class="ipts"> Última irrigação: 
+                            <input id="ipt_i_hr" type="number" placeholder="00" class="horas">:
+                            <input id="ipt_i_mnt" type="number" placeholder="00">
+                        </div><br>
+                        <br>
+                        Os níveis de umidade permaneceram satisfatórios por <u>x</u> horas. 
+                    </span>
+                </div>
+                <div class="div_registrar">
+                    <h1>
+                      Registrar alerta
+                    </h1>
+                    <div class="ipts">
+                      <input type="number" id="ipt_a_hr" placeholder="00">:
+                      <input type="number" id="ipt_a_mnt" placeholder="00"> 
+                    </div>
+                    </form>
+                    <button onclick="registrar()">Registrar</button>
+                  </div>
+            </div>
+
+            <div class="graficos">
+                <div class="div_dashboard">
+                    <div>
+                        <canvas id="grafico_linha" style="position: relative; height:30vh; width:30vw"></canvas>
+                    </div>
+                </div>
+
+                <div class="div_dashboard">
+                    <div>
+                        <canvas id="grafico_barra" style="position: relative; height:30vh; width:30vw"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function registrar() {
+        var i_hr = Number(ipt_i_hr.value)
+        var i_mnt = Number(ipt_i_mnt.value)
+        var a_hr = Number(ipt_a_hr.value)
+        var a_mnt = Number(ipt_a_mnt.value)
+        var hr = a_hr - i_hr 
+        var mnt = a_mnt - i_mnt
+        texto.innerHTML = `Última irrigação: <u>${i_hr}:${i_mnt} </u> <br>
+                        <br>
+                        <br>
+                        Os níveis de umidade permaneceram satisfatórios por ${hr} horas e ${mnt} minutos.`
+    }
+
+    const horario = [
+        '06:00',
+        '07:00',
+        '08:00',
+        '09:00',
+        '10:00',
+        '11:00',
+    ];
+
+    const meses = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+    ];
+
+    const dataLinha = {
+        labels: horario,
+        datasets: [{
+            label: 'TEMPERATURA',
+            backgroundColor: '#3d7738',
+            borderColor: '#3d7738',
+            data: [19, 22, 24, 26, 28, 32],
+        },
+        {
+            label: 'UMIDADE',
+            backgroundColor: 'rgb(8, 92, 74)',
+            borderColor: 'rgb(8, 92, 74)',
+            data: [65, 63, 60, 55, 50, 45],
+        }
+        ]
+    };
+
+    const dataBarra = {
+        labels: meses,
+        datasets: [{
+            label: 'Temperatura média',
+            backgroundColor: '#3d7738',
+            borderColor: '#3d7738',
+            data: [29, 27, 25, 23, 20, 18],
+        },
+        {
+            label: 'Umidade média',
+            backgroundColor: 'rgb(8, 92, 74)',
+            borderColor: 'rgb(8, 92, 74)',
+            data: [65, 63, 60, 55, 50, 45,],
+        }
+        ]
+    };
+
+    const configLinha = {
+        type: 'line',
+        data: dataLinha,
+        options: {}
+    };
+    const configBarra = {
+        type: 'bar',
+        data: dataBarra,
+        options: {}
+    };
+</script>
+
+<script>
+    const grafico_linha = new Chart(
+        document.getElementById('grafico_linha'),
+        configLinha
+    );
+
+    const grafico_barra = new Chart(
+        document.getElementById('grafico_barra'),
+        configBarra
+    );
+</script>

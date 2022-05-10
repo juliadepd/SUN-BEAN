@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css global/estilo.css" />
+  <link rel="stylesheet" href="../Login/login.css" />
+  <script src="login.js"></script>
+  <link rel="icon" type="imagem/png" href="../assets/Identidade Visual/favicon.ico" />
+  <title>Sunbean | Entrar</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <a href="../index.html"><img src="../assets/Identidade Visual/Logo PNG.png" /></a>
+      <ul class="navbar">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../Calculadora/Calculadora.html">Simular</a></li>
+        <li><a href="../Suporte/suporte.html">Suporte</a></li>
+        <li><a href="../Cadastro/cadastro.html">Cadastrar</a></li>
+        <li class="active">Entrar</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="conteudo">
+    <!-- bloco esquerdo -->
+    <div class="leftbox">
+      <p id="texto_left">
+        Nunca foi tão simples<br />ter o controle da sua safra!
+      </p>
+    </div>
+
+    <!-- bloco direito -->
+    <div class="rightbox">
+      <div class="container_right">
+        <img id="logo_right" src="../assets/Identidade Visual/Logo PNG.png" />
+      </div>
+
+      <div class="container_right2">
+        <p id='texto_login'>Login</p>
+
+        <div>
+          <p class="texto_inputs">E-mail</p>
+          <input id="input_email_login" class="input_texto" type="text" placeholder="Exemplo@hotmail.com" />
+        </div>
+
+        <div class="senha">
+          <p class="texto_inputs">Senha</p>
+          <input id="input_senha_login" class="input_texto" type="password" placeholder="Inserir Senha" />
+        </div>
+
+        <div id="validacao">
+        <span id="span_validacao"></span>
+        </div>
+
+        <div class="LembrarUsuario_EsqueceuSenha">
+          <span id="span_lembrarUsuario"><input type="checkbox"> Lembrar Usuário</span>
+          <span id="span_esqueceuSenha"><a href="../Esqueceu a senha/esqueceu.html">Esqueceu sua senha?</a></span>
+        </div>
+
+        <div>
+          <button id="btn_entrar" onclick="validLogin()">Entrar</button>
+        </div>
+
+        <div class="div_cadastrar">
+          <p id="nao_possui_conta">Não possui uma conta ainda?</p> <a href="../Cadastro/cadastro.html" id="a_cadastrar">Faça parte da Sunbean</a>
+        </div>
+      </div>
+
+      <div class="container_right3">
+        <span id="ou">OU</span>
+        <div class="container_social">
+          <a target="_blank" href="https://accounts.google.com/signin/v2/identifier?hl=pt-br&flowName=GlifWebSignIn&flowEntry=ServiceLogin"> <img src="../assets/Identidade Visual/icon google.png" /></a>
+          <a target="_blank" href="https://pt-br.facebook.com/"><img src="../assets/Identidade Visual/icon facebook.png" /></a>
+          <a target="_blank" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><img src="../assets/Identidade Visual/icon twitter.png" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="left">
+        <p>Sunbean SA | CNPJ: 60.746.948.0001-12</p>
+        <p>PORTABILIDADE | TRABALHE CONOSCO | SEGURANÇA | INVESTIDORES</p>
+      </div>
+
+      <div class="center">
+        <p>Cidade De Deus, S/Nº Vila Yara | Osasco | SP | CEP: 06029-900</p>
+        <p>
+          Copyright © 2020-2022 Sunbean Company S.L. Todos os direitos
+          reservados.
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Siga-nos nas redes sociais!</p>
+        <div class="icones">
+          <a target="_blank" href=""><img src="../assets/Identidade Visual/Twitter.png" /></a>
+          <a target="_blank" href="https://www.facebook.com/Sun-Bean-107283795294201"><img src="../assets/Identidade Visual/Facebook.png" /></a>
+          <a target="_blank" href="https://instagram.com/sun_bean2022?igshid=YmMyMTA2M2Y="><img src="../assets/Identidade Visual/Instagram.png" /></a>
+          <a target="_blank" href=""><img src="../assets/Identidade Visual/Linkedin.png" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

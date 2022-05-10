@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Calculadora.css" />
+    <link rel="stylesheet" href="../css global/estilo.css" />
+    <link rel="icon" type="imagem/png" href="../assets/Identidade Visual/favicon.ico">
+    <script src="calculadora.js"></script>
+    <title>Sunbean | Simulador</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+          <a href="../index.html"><img src="../assets/Identidade Visual/Logo PNG.png" /></a>
+          <ul class="navbar">
+            <li><a href="../index.html">Inicio</a></li>
+            <li  class="active">Simular</li>
+            <li><a href="../Suporte/suporte.html">Suporte</a></li>
+            <li><a href="../Cadastro/cadastro.html">Cadastrar</a></li>
+            <li><a href="../Login/login.html">Entrar</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Conteúdo -->
+      <div class="conteudo">
+        <!-- bloco esquerdo -->
+        <div class="leftbox">
+            
+        </div>
+  
+        <!-- bloco direito -->
+        <div class="rightbox">
+            <div class="conteiner">
+                <div class="titulo">
+                    <p>Calcule</p>
+                </div>
+
+                <div class="inputs">
+                    <p>Informe o lucro total obtido na safra anterior</p>
+                    <input id="lucro_safra_anterior" type="text" placeholder="Lucro na safra passada"> 
+                    <p>Informe a quantidade de hectares plantados na safra atual</p>
+                    <input id="cotacao_saca_soja" type="text" placeholder="Área em hectar">
+                    <p>Informe a cotação atual da saca de soja</p>
+                    <input id="qtd_hectares" type="text" placeholder="Cotação atual de soja na sua cidade">
+
+                    <button  onclick="calcular_botao()">Calcular</button>
+                    
+                  </div>
+                  <div id="frase"></div>
+            </div>
+        </div>
+      </div>
+  
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="left">
+          <p>Sunbean SA | CNPJ: 60.746.948.0001-12</p>
+          <p>PORTABILIDADE | TRABALHE CONOSCO | SEGURANÇA | INVESTIDORES</p>
+        </div>
+
+        <div class="center">
+          <p>Cidade De Deus, S/Nº Vila Yara | Osasco | SP | CEP: 06029-900</p>
+          <p>
+            Copyright © 2020-2022 Sunbean Company S.L. Todos os direitos
+            reservados.
+          </p>
+        </div>
+
+        <div class="right">
+          <p>Siga-nos nas redes sociais!</p>
+          <div class="icones">
+            <a target="_blank" href=""><img src="../assets/Identidade Visual/Twitter.png" /></a>
+            <a target="_blank" href="https://www.facebook.com/Sun-Bean-107283795294201"><img src="../assets/Identidade Visual/Facebook.png" /></a>
+            <a target="_blank" href="https://instagram.com/sun_bean2022?igshid=YmMyMTA2M2Y="><img src="../assets/Identidade Visual/Instagram.png" /></a>
+            <a target="_blank" href=""><img src="../assets/Identidade Visual/Linkedin.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
