@@ -4,13 +4,14 @@ body {
 }
 
 .lateral {
-    position: fixed;
+    
     background-color: #5bb553;
     width: 15%;
     height: 620px;
     float: left;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
+    position: fixed;
 }
 
 .lateral .container {
@@ -76,8 +77,6 @@ li a {
     background-color: #ffffff23;
     font-weight: bolder;
 }
-
-
 .ativa {
     font-weight: bolder;
     font-size: large;
@@ -148,7 +147,7 @@ li a {
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
     justify-content: space-evenly;
-    box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
+    box-shadow: 9px 7px 5px rgba(0, 0,  0, 0.205);
 }
 
 h4 {
