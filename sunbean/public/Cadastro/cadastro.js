@@ -1,9 +1,9 @@
-function validCadastro() {
-  var nomeVar = input_nome_razao.value;
-  var telVar = input_tel.value;
-  var senhaVar = input_senha.value;
-  var cpfVar = input_cpf_cnpj.value;
-  var emailVar = input_email.value;
+//function validCadastro() {
+  // var nomeVar = input_nome_razao.value;
+  // var telVar = input_tel.value;
+  // var senhaVar = input_senha.value;
+  // var cpfVar = input_cpf_cnpj.value;
+  // var emailVar = input_email.value;
 
   /* Verifica se há algum input com valor vazio e ajusta o layout para o texto caber na tela caso houver */
   // if (input_nome_razao.value == '' || input_tel.value == '' || input_senha.value == '' || input_cpf_cnpj.value == '' || input_email.value == '' || input_repetir_senha.value == '') {
@@ -126,5 +126,5 @@ function validCadastro() {
   // }
 
 
-}
+//}
 

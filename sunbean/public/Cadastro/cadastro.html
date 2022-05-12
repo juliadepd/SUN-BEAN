@@ -155,6 +155,8 @@
   var emailVar = input_email.value;
   var confirmacaoSenhaVar = input_repetir_senha.value;
 
+  var idUsuarioLogado = sessionStorage.getItem("ID_USUARIO");
+
     fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
@@ -167,16 +169,17 @@
                 telServer: telVar,
                 senhaServer: senhaVar,
                 cpfServer: cpfVar,
-                emailServer: emailVar
+                emailServer: emailVar,
+                fkTitularServer: idUsuarioLogado
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
+                //cardErro.style.display = "block";
 
-                aler("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
                 setTimeout(() => {
                     window.location.href = "../Login/login.html";
@@ -196,7 +199,7 @@
     }
 
     function sumirMensagem() {
-        cardErro.style.display = "none"
+        //cardErro.style.display = "none"
     }
   
 </script>
