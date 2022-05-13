@@ -1,16 +1,17 @@
 body {
     display: flex;
+    box-sizing: border-box;
     margin: 0%;
-
 }
 
 .lateral {
+    
     background-color: #5bb553;
     width: 15%;
-    height: 620px;
+    height: 100vh;
     float: left;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     position: fixed;
 }
 
@@ -66,24 +67,27 @@ body {
     margin-left: 10px;
 }
 
-.lateral .navbarra a:hover {
-    transition: 0.7s;
-    font-weight: bolder;
-    font-size: +19px;
+li a {
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 0%;
 }
 
-.navbarra li a {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-}
-
-.active {
+.navbarra li a:hover {
+    transition: 0.3s;
+    background-color: #ffffff23;
     font-weight: bolder;
-    font-size: large;
+}
+.ativa {
+    font-weight: bolder;
     font-size: 15px;
+    background-color: #ffffff23;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: -8px;
+    margin-bottom: -3px;
 }
 
 .logout {
@@ -98,8 +102,12 @@ body {
     list-style: none;
 }
 
-.logout li a {
+.logout a {
     font-size: large;
+}
+
+.logout a:hover {
+    font-weight: bolder;
 }
 
 .sair {
@@ -108,16 +116,16 @@ body {
 }
 
 .banner {
-    margin-left: 200px;
     width: 85%;
-    height: 800px;
+    height: 1200px;
+    margin-left: 200px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(to left,
-            rgba(255, 0, 0, 0),
+            rgba(0, 0, 0, 0.096),
             #c4c4c4,
-            rgb(226, 226, 226));
+            rgb(255, 255, 255));
 }
 
 .idvisual {
