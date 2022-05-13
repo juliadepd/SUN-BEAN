@@ -93,10 +93,10 @@
 
 <script>
     function cadastrar() {
-        var nome = ipt_nome.value
-        var hectares = Number(ipt_hectares.value)
-        var cep = ipt_cep.value
-        var numero = ipt_numero.value
+        var nomeVar = ipt_nome.value
+        var hectaresVar = Number(ipt_hectares.value)
+        var cepVar = ipt_cep.value
+        var numeroVar = ipt_numero.value
 
         right_box.innerHTML =
 
@@ -117,15 +117,49 @@
              </div>`
 
         confirma.src = "../assets/Identidade Visual/confirma.png"
-        div_plantacao.innerHTML = `<b>${nome}</b><br>
-        ${hectares} hectares<br>
-        CEP: ${cep}<br>
-        Número: ${numero}`
+        div_plantacao.innerHTML = `<b>${nomeVar}</b><br>
+        ${hectaresVar} hectares<br>
+        CEP: ${cepVar}<br>
+        Número: ${numeroVar}`
 
-    }
 
-    function refresh() {
-        window.location.reload()
+    fetch("/usuarios/plantacao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+
+                nomeServer: nomeVar,
+                hectaresServer: hectaresVar,
+                cepServer: cepVar,
+                numeroServer: numeroVar
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                //cardErro.style.display = "block";
+
+                alert("Cadastro da plantação realizado com sucesso!");
+
+                setTimeout(() => {
+                    window.location.reload()
+                }, "2000")
+                
+                limparFormulario();
+                
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+           
+        });
+
+        return false;
     }
 
     // select * from usuario where fkTItular is not null and fkTitular = 2;
