@@ -30,7 +30,7 @@ body {
     border-radius: 50%;
 }
 
-.username {
+#username {
     background-color: #ffffff23;
     width: 145%;
     height: 70px;
@@ -42,12 +42,12 @@ body {
     margin-top: 15px;
 }
 
-.username h1 {
+#username h1 {
     font-size: x-large;
     margin: 2px;
 }
 
-.username h2 {
+#username h2 {
     font-size: small;
     font-weight: 100;
     margin: 0%;
@@ -339,4 +339,24 @@ button {
     margin-right: 670px;
     margin-bottom: 10px;
     margin-top: 80px;
+}
+
+.textos{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    border: 1px solid red;
+}
+
+.textos .tabela{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textos .card{
+    border: 1px solid black;
+    padding: 30px;
+    width: 80%;
+    height: auto;
 }
