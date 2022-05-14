@@ -36,6 +36,7 @@ body {
     height: 70px;
     align-items: center;
     border-top: #3d7738;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -348,15 +349,19 @@ button {
     border: 1px solid red;
 }
 
-.textos .tabela{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.textos .card{
+    width: 100%;
 }
 
-.textos .card{
-    border: 1px solid black;
-    padding: 30px;
-    width: 80%;
-    height: auto;
+th, td{
+    padding: 10px;
 }
+
+td{
+    text-align: center;
+}
+
+/* .plantio{
+    text-decoration: none;
+    list-style: none;
+} */

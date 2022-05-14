@@ -18,8 +18,8 @@
         <div class="container">
             <img class="foto" src="../assets/Identidade Visual/user-soja-emporio.png">
             <div id="username"></div>
+            <!-- <h2>Usuário Titular</h2> -->
             
-                <h2>Usuário Titular</h2>
             <ul class="navbarra">
                 <li><a href="../Monitoramento/monitoramento.html">Monitoramento</a></li>
                 <li><a href="../Registros/registros.html">Registros</a></li>
@@ -37,7 +37,7 @@
         <div class="ola">
             <img class="idvisual" src="../assets/Identidade Visual/Logo PNG.png">
             <div class="separador"></div>
-            <h4>Olá, <b>Emporio da Soja</b>. Seja bem-vindo(a)!</h4>
+            <h4 id="bemvindo"></h4>
         </div>
 
         <div class="container">
@@ -90,7 +90,7 @@
         <div class="textos">
             <div class="card">
 
-                <table class="tabela">
+                <table>
                     <thead>
                         <tr>
                             <th>Nome:</th>
@@ -108,6 +108,13 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- <ul class="plantio">
+                    <li>Nome:</li>
+                    <li>Hectares</li>
+                    <li>CEP:</li>
+                    <li>Número:</li>
+                </ul> -->
+
             </div>
         </div>
     </body>
@@ -117,6 +124,7 @@
 <script>
     var usuario = sessionStorage.getItem('NOME_USUARIO')
     username.innerHTML = usuario
+    bemvindo.innerHTML = `Olá, <b>${usuario}</b>. Seja bem-vindo(a)!`
 
     function cadastrar() {
         var nomeVar = ipt_nome.value
