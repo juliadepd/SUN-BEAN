@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="acesso.css">
+    <link rel="stylesheet" href="../css global/estilo.css">
+    <link rel="icon" href="../assets/Identidade Visual/favicon.ico">
+    <title>SunBean | Acesso</title>
+</head>
+
+<body>
+    <div class="lateral">
+        <div class="container">
+            <img class="foto" src="../assets/Identidade Visual/user-soja-emporio.png">
+            <div id="username"></div>
+
+            <ul class="navbarra">
+                <li><a href="../Monitoramento/monitoramento.html">Monitoramento</a></li>
+                <li><a href="../Registros/registros.html">Registros</a></li>
+                <li><a href="../Plantações/plantacoes.html">Plantações</a></li>
+                <li class="ativa">Acesso</li>
+            </ul>
+            <div class="logout">
+                <li><a href="../Login/login.html">Sair</a></li>
+                <img class="sair" src="../assets/Identidade Visual/iconelogout.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="ola">
+            <img class="idvisual" src="../assets/Identidade Visual/Logo PNG.png">
+            <div class="separador"></div>
+            <h4 id="bemvindo"></h4>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="leftbox">
+                    <div class="div_1">
+                        <img src="../assets/Identidade Visual\Logo PNG monocromatica copy.png" class="logo_mono">
+                    </div>
+
+                    <div class="div_2">
+                        <p class="texto1"> Cadastre usuários para terem acesso a seus dados de temperatura e umidade
+                        </p>
+                    </div>
+
+                    <div class="div_3">
+                        <img src="../assets/Identidade Visual/acesso_unlock.png" class="imagem_cadastro">
+                    </div>
+                </div>
+
+                <div class="rightbox" id="right_box">
+                    <p class="texto_cadastro">Cadastrar acesso de usuários</p>
+
+                    <div class="conjunto_ipts">
+                        <div class="div_ipts">
+                            <p>Nome</p><input type="text" id="ipt_nome" placeholder="Inserir nome">
+                            <p>E-mail</p><input type="text" id="ipt_hectares" placeholder="exemplo@hotmail.com">
+                            <p>Senha</p><input type="password" id="ipt_hectares" placeholder="Inserir senha">
+                        </div>
+
+                        <div class="div_ipts">
+                            <p>Sobrenome</p><input type="text" id="ipt_cep" placeholder="inserir sobrenome">
+                            <p>CPF</p><input type="text" id="ipt_numero" placeholder="000.000.000-00">
+                            <p>Confirmar Senha</p><input type="password" id="ipt_hectares" placeholder="Repetir senha">
+                        </div>
+                    </div>
+
+                    <div class="botao">
+                        <button>Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

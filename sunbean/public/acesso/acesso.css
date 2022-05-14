@@ -1,0 +1,352 @@
+body {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.lateral {
+    background-color: #5bb553;
+    width: 15%;
+    height: 100vh;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    position: fixed;
+}
+
+.lateral .container {
+    width: 70%;
+    height: 90%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foto {
+    width: 80%;
+    border-radius: 50%;
+}
+
+#username {
+    background-color: #ffffff23;
+    width: 145%;
+    height: 70px;
+    align-items: center;
+    border-top: #3d7738;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.navbarra {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-decoration: none;
+    padding: 0%;
+    margin-left: 10px;
+}
+
+li a {
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 0%;
+}
+
+.navbarra li a:hover {
+    transition: 0.3s;
+    background-color: #ffffff23;
+    font-weight: bolder;
+}
+
+.ativa {
+    font-weight: bolder;
+    font-size: large;
+    font-size: 15px;
+    background-color: #ffffff23;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin: 0%;
+    color: rgb(255, 255, 255);
+}
+
+.logout {
+    background-color: #ffffff23;
+    width: 145%;
+    height: 40px;
+    align-items: center;
+    border-top: #3d7738;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    list-style: none;
+}
+
+.logout a {
+    font-size: large;
+}
+
+.logout a:hover {
+    font-weight: bolder;
+}
+
+.sair {
+    width: 35px;
+    margin-left: 10px;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    margin-left: 200px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left,
+    rgba(0, 0, 0, 0.096),
+    #c4c4c4,
+    rgb(255, 255, 255));
+}
+
+.idvisual {
+    width: 150px;
+}
+
+.separador {
+    width: 1px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+
+.ola {
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    justify-content: space-evenly;
+    box-shadow: 9px 7px 5px rgba(0, 0,  0, 0.205);
+}
+
+h4 {
+    margin: 0cm;
+    padding: 0%;
+    font-weight: 500
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    list-style-type: none;
+
+}
+
+.banner .container {
+    width: 80%;
+    margin-left: 120px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+}
+
+.leftbox {
+    background-color: #5bb553;
+    height: 450px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: 1px;
+}
+
+.div_1 {
+    width: 100%;
+    height: 10%;
+    margin-top: 7px;
+}
+
+.logo_mono {
+    height: 100%;
+    margin-left: 10px;
+}
+
+.div_2 {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.leftbox p {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 22px;
+    margin-bottom: -10%;
+    z-index: -1;
+}
+
+.div_2 img{
+    width: 40px;
+    margin-left: 170px;
+    z-index: 1;
+}
+
+.div_3 {
+    height: 45%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.imagem_cadastro {
+    height: 85%;
+}
+
+.rightbox {
+    background-color: rgb(255, 255, 255);
+    height: 450px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    justify-content: center;
+}
+
+.texto_cadastro {
+    font-size: x-large;
+    font-weight: 400;
+    margin-right: 120px;
+    margin-bottom: 10px;
+    margin-top: 0%;
+
+}
+
+.conjunto_ipts {
+    display: flex;
+    color: #37474f;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: rgb(221, 221, 221);
+    border-radius: 4px;
+    border: 0;
+    height: 25px;
+    width: 180px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding-left: 10px;
+}
+
+.div_ipts {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.conjunto_ipts p {
+    margin-bottom: 0%;
+}
+
+button {
+    background-color: #5bb553;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.div_cima {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: medium;
+    width: 70%;
+    margin-top: 20px;
+    padding-left: 15px;
+    color: #37474f;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #37474f;
+    border-radius: 5px;
+    padding: 5px;
+    ;
+}
+
+#div_plantacao {
+    margin-top: 13px;
+}
+
+.tudo_certo {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: larger;
+    width: 70%;
+    margin-top: 45px;
+    padding-left: 15px;
+    color: #37474f;
+}
+
+.tudo_certo span {
+    cursor: pointer;
+    color: #5bb553;
+    font-weight: bold;
+}
+
+#confirma {
+    width: 30%;
+    margin: 0%;
+}
+
+.texto_2 {
+    font-size: x-large;
+    font-weight: 400;
+    margin-right: 670px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+
+.textos{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    border: 1px solid red;
+}
+
+.textos .card{
+    width: 100%;
+}
+
+th, td{
+    padding: 10px;
+}
+
+td{
+    text-align: center;
+}
