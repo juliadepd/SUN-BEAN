@@ -43,12 +43,12 @@
 
         <div>
           <p class="texto_inputs">Nova senha:</p>
-          <input id="input_novasenha" class="input_texto" type="password" placeholder="*********"/>
+          <input id="input_senha" class="input_texto" type="password" placeholder="*********"/>
         </div>
 
         <div class="senha">
           <p class="texto_inputs">Confirmar senha:</p>
-          <input id="input_novasenha2" class="input_texto" type="password" placeholder="**********" />
+          <input id="input_confirmarsenha" class="input_texto" type="password" placeholder="**********" />
         </div>
         <div class="LembrarUsuario_EsqueceuSenha">
           <span id="span_esqueceuSenha"><a href="../Login/login.html">Lembrou sua senha?</a></span>
@@ -97,7 +97,7 @@
 </html>
 <script>
   function validLogin() {
-    if (input_novasenha.value == '' || input_novasenha2 == '') {
+    if (input_senha.value == '' || input_confirmarsenha == '') {
   alert('Por favor preencha todos os campos')
     } else {
       window.location.href="../Validação Esqueceu a senha/validação_esqueceu.html"
