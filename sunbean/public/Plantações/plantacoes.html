@@ -102,7 +102,7 @@
                     <tbody>
                         <tr>
                             <td id="td_nome"></td>
-                            <td id="td_hectares"></td>
+                            <td id="td_qtdHectares"></td>
                             <td id="td_cep"></td>
                             <td id="td_numero"></td>
                         </tr>
@@ -123,12 +123,12 @@
 
 <script>
     var usuario = sessionStorage.getItem('NOME_USUARIO')
-    username.innerHTML = usuario
-    bemvindo.innerHTML = `Olá, <b>${usuario}</b>. Seja bem-vindo(a)!`
+    username.innerHTML = usuario[0].toLocaleUpperCase() + usuario.substr(1); // esta formatado para a primeira letra ser Maiuscula
+    bemvindo.innerHTML = `Olá, <b>${usuario[0].toLocaleUpperCase() + usuario.substr(1)}</b>. Seja bem-vindo(a)!`
 
     function cadastrar() {
         var nomeVar = ipt_nome.value
-        var hectaresVar = Number(ipt_hectares.value)
+        var qtdHectaresVar = Number(ipt_hectares.value)
         var cepVar = ipt_cep.value
         var numeroVar = ipt_numero.value
 
@@ -152,7 +152,7 @@
 
         confirma.src = "../assets/Identidade Visual/confirma.png"
         div_plantacao.innerHTML = `<b>${nomeVar}</b><br>
-        ${hectaresVar} hectares<br>
+        ${qtdHectaresVar} hectares<br>
         CEP: ${cepVar}<br>
         Número: ${numeroVar}`
 
@@ -219,12 +219,12 @@
                             // Aqui eu crio as var (let é a mesma coisa que var) dos dados que quero apresentar no site:
                             // Temos que colocar publicação.Nome do campo do banco de dados:
                             let nomePlantacao = publicacao.nome
-                            let hectares = publicacao.hectares
+                            let hectares = publicacao.qtdHectares
                             let cep = publicacao.cep
                             let numero = publicacao.numero
                             // Aqui eu aponto para onde meus dados irão para serem apresentados:
                             td_nome.innerHTML += `${nomePlantacao} <br>`
-                            td_hectares.innerHTML += `${hectares} <br>`
+                            td_qtdHectares.innerHTML += `${hectares} <br>`
                             td_cep.innerHTML += `${cep} <br>`
                             td_numero.innerHTML += `${numero} <br>`
 
