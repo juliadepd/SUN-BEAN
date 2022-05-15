@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css global/estilo.css" />
     <link rel="stylesheet" href="cadastro.css" />
-    <!-- <script src="cadastro.js"></script> -->
+    <script src="cadastro.js"></script>
     <link rel="icon" type="imagem/png" href="../assets/Identidade Visual/favicon.ico">
     <title>Sunbean | Cadastro</title>
   </head>
@@ -144,62 +144,3 @@
     </div>
   </body>
 </html>
-
-<script>
-  function validCadastro(){
-
-  var nomeVar = input_nome_razao.value;
-  var telVar = input_tel.value;
-  var senhaVar = input_senha.value;
-  var cpfVar = input_cpf_cnpj.value;
-  var emailVar = input_email.value;
-  var confirmacaoSenhaVar = input_repetir_senha.value;
-
-  var idUsuarioLogado = sessionStorage.getItem("ID_USUARIO");
-
-    fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                telServer: telVar,
-                senhaServer: senhaVar,
-                cpfServer: cpfVar,
-                emailServer: emailVar,
-                fkTitularServer: idUsuarioLogado
-            })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                //cardErro.style.display = "block";
-
-                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
-
-                setTimeout(() => {
-                    window.location.href = "../Login/login.html";
-                }, "2000")
-                
-                limparFormulario();
-                
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-           
-        });
-
-        return false;
-    }
-
-    function sumirMensagem() {
-        //cardErro.style.display = "none"
-    }
-  
-</script>
