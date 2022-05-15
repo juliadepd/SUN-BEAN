@@ -115,6 +115,30 @@ function plantacao(req, res) {
     
 }
 
+function novasenha(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var senha = req.body.novasenhaServer;
+
+  
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.novasenha(senha)
+            .then(
+                function (resultado) {
+                  res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao atualizar senha! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+}
+
 function listarPlantacoes(req, res) {
     usuarioModel.listarPlantacoes()
         .then(function (resultado) {
@@ -136,6 +160,7 @@ module.exports = {
     entrar,
     cadastrar,
     plantacao,
+    novasenha,
     listar,
     listarPlantacoes,
     testar

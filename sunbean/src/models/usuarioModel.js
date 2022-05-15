@@ -43,6 +43,16 @@ function plantacao(nome, hectares, cep, numero) {
     return database.executar(instrucao);
 }
 
+function novasenha(senha) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, hectares, cep, numero);
+    
+    var instrucao = `
+            update [dbo].[usuario] set senha = '${senha}' where idUsuario = 3;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 function listarPlantacoes() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
@@ -57,5 +67,6 @@ module.exports = {
     cadastrar,
     listarPlantacoes,
     plantacao,
+    novasenha,
     listar,
 };

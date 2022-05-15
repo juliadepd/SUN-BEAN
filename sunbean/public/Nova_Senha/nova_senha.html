@@ -97,10 +97,45 @@
 </html>
 <script>
   function validLogin() {
-    if (input_senha.value == '' || input_confirmarsenha == '') {
+    var novasenhaVar = input_senha.value
+    var confirmarsenhaVar = input_confirmarsenha.value
+    if (novasenha == '' || conrfirmarsenha == '') {
   alert('Por favor preencha todos os campos')
-    } else {
-      window.location.href="../Validação Esqueceu a senha/validação_esqueceu.html"
-    }
   }
-    </script>
+  fetch("/usuarios/novasenha", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                novasenhaServer: novasenhaVar
+               
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                //cardErro.style.display = "block";
+
+                alert("Senha atualizada com sucesso!!");
+
+                setTimeout(() => {
+                    window.location.href = "../Login/login.html";
+                }, "2000")
+                
+                limparFormulario();
+                
+            } else {
+                throw ("Houve um erro ao tentar atualizar senha!...");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+           
+        });
+
+        return false;
+    }
+</script>
