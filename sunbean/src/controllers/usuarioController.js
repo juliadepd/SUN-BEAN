@@ -117,11 +117,12 @@ function plantacao(req, res) {
 
 function novasenha(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var senha = req.body.novasenhaServer;
+    var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
 
   
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.novasenha(senha)
+        usuarioModel.novasenha(email, senha)
             .then(
                 function (resultado) {
                   res.json(resultado);

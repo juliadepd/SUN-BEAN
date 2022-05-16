@@ -43,11 +43,11 @@ function plantacao(nome, hectares, cep, numero) {
     return database.executar(instrucao);
 }
 
-function novasenha(senha) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, hectares, cep, numero);
+function novasenha(email, senha) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function validSenha():", senha);
     
     var instrucao = `
-            update [dbo].[usuario] set senha = '${senha}' where idUsuario = 3;
+            update usuario set senha = '${senha}' where email = '${email}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

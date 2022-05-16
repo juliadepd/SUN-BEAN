@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="botao">
-                        <button>Cadastrar</button>
+                        <button onclick="cadastro()">Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -80,3 +80,10 @@
     </div>
 </body>
 </html>
+
+<script>
+    var usuario = sessionStorage.getItem('NOME_USUARIO')
+    username.innerHTML = usuario[0].toLocaleUpperCase() + usuario.substr(1); // esta formatado para a primeira letra ser Maiuscula
+    bemvindo.innerHTML = `Olá, <b>${usuario[0].toLocaleUpperCase() + usuario.substr(1)}</b>. Seja bem-vindo(a)!`
+
+</script>
