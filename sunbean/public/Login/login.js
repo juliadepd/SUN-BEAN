@@ -35,12 +35,12 @@ function validLogin() {
     /* Valida se o email possui "@" */
       input_email_login.style.border = "thin solid #FF0000";
       span_validacao.innerHTML = 'Email inválido, deve conter "@"';
-    } else if (input_senha_login.value.length < 10) {
+    } else if (input_senha_login.value.length < 8) {
 
-    /* Valida se a senha tem mais de 10 caracteres */
+    /* Valida se a senha tem mais de 8 caracteres */
       input_senha_login.style.border = "thin solid #FF0000";
       input_email_login.style.border = "none";
-      span_validacao.innerHTML = "Senha deve conter no mínimo 10 digitos";
+      span_validacao.innerHTML = "Senha deve conter no mínimo 8 digitos";
     } else {
 
     /* Confirma o login e abre a tela de monitoramento */

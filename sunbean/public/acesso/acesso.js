@@ -119,7 +119,9 @@ function validCadastro() {
       input_senha.style.border = "none";
       input_confirmarSenha.style.border = "none";
 
+      // Alterar essa parte quando for conectar a API
       span_validacao.innerHTML = "Cadastro ok, aguardando conexão com a API";
+      span_validacao.style.color = "green";
     }
   }
 }
