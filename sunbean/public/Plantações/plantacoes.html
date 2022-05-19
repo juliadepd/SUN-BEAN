@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="plantacoes.css">
-    <link rel="stylesheet"
-        href="../css global/estilo.css">
-    <link rel="icon"
-        href="../assets/Identidade Visual/favicon.ico">
+    <link rel="stylesheet" href="../css global/estilo.css">
+    <link rel="icon" href="../assets/Identidade Visual/favicon.ico">
     <title>SunBean | Plantações</title>
 </head>
-<!-- Start of sunbean Zendesk Widget script --><script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a2a87b3b-185f-4555-aa20-94e7f1934025"> </script><!-- End of sunbean Zendesk Widget script -->
+<!-- Start of sunbean Zendesk Widget script -->
+<script id="ze-snippet"
+    src="https://static.zdassets.com/ekr/snippet.js?key=a2a87b3b-185f-4555-aa20-94e7f1934025"> </script>
+<!-- End of sunbean Zendesk Widget script -->
+
 <body>
     <div class="lateral">
         <div class="container">
             <img class="foto" src="../assets/Identidade Visual/user-soja-emporio.png">
             <div id="username"></div>
             <!-- <h2>Usuário Titular</h2> -->
-            
+
             <ul class="navbarra">
                 <li><a href="../Monitoramento/monitoramento.html">Monitoramento</a></li>
                 <li><a href="../Registros/registros.html">Registros</a></li>
@@ -44,18 +46,16 @@
             <div class="card">
                 <div class="leftbox">
                     <div class="div_1">
-                        <img src="../assets/Identidade Visual\Logo PNG monocromatica copy.png"
-                            class="logo_mono">
+                        <img src="../assets/Identidade Visual\Logo PNG monocromatica copy.png" class="logo_mono">
                     </div>
                     <div class="div_2">
                         <p class="texto1"> Para poder solicitar a instalação dos sensores na sua plantação, conte-nos um
-                            pouco sobre ela 
+                            pouco sobre ela
                         </p>
                         <img src="../assets/Identidade Visual/seta.svg">
                     </div>
                     <div class="div_3">
-                        <img src="../assets/Identidade Visual/Gardening-cuate (2).png"
-                            class="imagem_cadastro">
+                        <img src="../assets/Identidade Visual/Gardening-cuate (2).png" class="imagem_cadastro">
                     </div>
                 </div>
                 <div class="rightbox" id="right_box">
@@ -117,9 +117,9 @@
 
             </div>
         </div>
-    </body>
-    
-    </html>
+</body>
+
+</html>
 
 <script>
     var usuario = sessionStorage.getItem('NOME_USUARIO')
@@ -157,7 +157,7 @@
         Número: ${numeroVar}`
 
 
-    fetch("/usuarios/plantacao", {
+        fetch("/usuarios/plantacao", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -182,15 +182,15 @@
                 setTimeout(() => {
                     window.location.reload()
                 }, "2000")
-                
+
                 limparFormulario();
-                
+
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-           
+
         });
 
         return false;
@@ -198,7 +198,7 @@
 
     // select * from usuario where fkTItular is not null and fkTitular = 2;
 
-    window.onload = function listarPlantacoes(){
+    window.onload = function listarPlantacoes() {
 
         // aguardar();  
         fetch("/usuarios/listarPlantacoes").then(function (resposta) {
@@ -210,25 +210,23 @@
                     // finalizarAguardar();
                     throw "Nenhum resultado encontrado!!";
                 }
-                  resposta.json().then(function (resposta) {
+                resposta.json().then(function (resposta) {
                     var feed = document.getElementById("feed_container");
-                      for (let i = 0; i < resposta.length; i++) {
+                    for (let i = 0; i < resposta.length; i++) {
                         var publicacao = resposta[i]; // i é a posição 0
-                            console.log(publicacao);
-                           
-                            // Aqui eu crio as var (let é a mesma coisa que var) dos dados que quero apresentar no site:
-                            // Temos que colocar publicação.Nome do campo do banco de dados:
-                            let nomePlantacao = publicacao.nome
-                            let hectares = publicacao.qtdHectares
-                            let cep = publicacao.cep
-                            let numero = publicacao.numero
-                            // Aqui eu aponto para onde meus dados irão para serem apresentados:
-                            td_nome.innerHTML += `${nomePlantacao} <br>`
-                            td_qtdHectares.innerHTML += `${hectares} <br>`
-                            td_cep.innerHTML += `${cep} <br>`
-                            td_numero.innerHTML += `${numero} <br>`
+                        console.log(publicacao);
 
-
+                        // Aqui eu crio as var (let é a mesma coisa que var) dos dados que quero apresentar no site:
+                        // Temos que colocar publicação.Nome do campo do banco de dados:
+                        let nomePlantacao = publicacao.nome
+                        let hectares = publicacao.qtdHectares
+                        let cep = publicacao.cep
+                        let numero = publicacao.numero
+                        // Aqui eu aponto para onde meus dados irão para serem apresentados:
+                        td_nome.innerHTML += `${nomePlantacao} <br>`
+                        td_qtdHectares.innerHTML += `${hectares} <br>`
+                        td_cep.innerHTML += `${cep} <br>`
+                        td_numero.innerHTML += `${numero} <br>`
                     }
                     // finalizarAguardar();
                 });
@@ -236,11 +234,9 @@
                 throw ('Houve um erro na API!');
                 // finalizarAguardar();
             }
-        // }).catch(function (resposta) {
-        //     console.error(resposta);
+            // }).catch(function (resposta) {
+            //     console.error(resposta);
             // finalizarAguardar();
         });
-    
     }
-
 </script>

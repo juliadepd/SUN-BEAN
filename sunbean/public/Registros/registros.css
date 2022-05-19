@@ -42,13 +42,13 @@ body {
   margin-top: 15px;
 }
 
-.username h1{
+.username h1 {
   font-size: x-large;
   margin: 0%;
   margin-bottom: 2px;
 }
 
-.username h2{
+.username h2 {
   font-size: small;
   font-weight: 100;
   margin: 0%;
@@ -79,26 +79,26 @@ body {
   font-size: 15px;
 }
 
-.logout{
-    background-color: #ffffff23;
-    width: 145%;
-    height: 40px;
-    align-items: center;
-    border-top: #3d7738;
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    list-style: none;
-  }
+.logout {
+  background-color: #ffffff23;
+  width: 145%;
+  height: 40px;
+  align-items: center;
+  border-top: #3d7738;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  list-style: none;
+}
 
-  .logout li a{
-    font-size: large;
-  }
+.logout li a {
+  font-size: large;
+}
 
-  .sair {
-    width: 35px;
-    margin-left: 10px;
-  }
+.sair {
+  width: 35px;
+  margin-left: 10px;
+}
 
 .banner {
   width: 85%;
@@ -106,13 +106,15 @@ body {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to left,
-      rgba(255, 0, 0, 0),
-      #c4c4c4,
-      #e9e9e9);
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0),
+    #c4c4c4,
+    #e9e9e9
+  );
 }
 
-.idvisual{
+.idvisual {
   width: 150px;
 }
 
@@ -136,18 +138,17 @@ body {
 h4 {
   margin: 0cm;
   padding: 0%;
-  font-weight: 500
+  font-weight: 500;
 }
 
-li a{
+li a {
   text-decoration: none;
   color: #e9e9e9;
   font-size: 15px;
   list-style-type: none;
-
 }
 
-.banner .container{
+.banner .container {
   width: 95%;
   margin-left: 30px;
   margin-top: 20px;
@@ -162,11 +163,9 @@ li a{
   display: flex;
   flex-direction: row;
   margin-top: 30px;
-
 }
 
 .div_dashboard {
-  
   width: 50%;
   height: 50%;
   border-radius: 5px;
@@ -201,7 +200,7 @@ li a{
   box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
 }
 
-.texto{
+.texto {
   font-size: larger;
 }
 
@@ -236,11 +235,11 @@ input {
   width: 30px;
 }
 
-input[type=number]::-webkit-inner-spin-button { 
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-  
-.div_registrar h1{
+
+.div_registrar h1 {
   font-weight: 500;
   font-size: larger;
   margin-bottom: 0%;
@@ -248,11 +247,10 @@ input[type=number]::-webkit-inner-spin-button {
 
 .ipts {
   width: 56%;
-  display: flex;  
+  display: flex;
   justify-content: center;
-
 }
 
-.horas{
+.horas {
   margin-left: 10px;
 }
