@@ -1,13 +1,14 @@
 function validLogin() {
 
 
-  // aguardar()
+
   /* verifica se há algum input vazio */
   if (input_email_login.value == "" || input_senha_login.value == "") {
     span_validacao.innerHTML = "Por favor preencha todos os campos";
     texto_login.style.marginTop = "0px";
     input_email_login.style.border = "thin solid #FF0000";
     input_senha_login.style.border = "thin solid #FF0000";
+    
 
     /* marca a input email */
     if (input_email_login.value !== "") {
@@ -45,10 +46,12 @@ function validLogin() {
       input_email_login.style.border = "none";
       span_validacao.innerHTML = "Senha deve conter no mínimo 8 digitos";
     } else {
-
+      aguardar()
     /* Confirma o login e abre a tela de monitoramento */
       var emailVar = input_email_login.value;
       var senhaVar = input_senha_login.value;
+
+
 
       fetch("/usuarios/autenticar", {
         method: "POST",
@@ -62,6 +65,7 @@ function validLogin() {
       })
         .then(function (resposta) {
           console.log("ESTOU NO THEN DO entrar()!");
+          finalizarAguardar();
 
           if (resposta.ok) {
             console.log(resposta);
@@ -86,7 +90,7 @@ function validLogin() {
             spanval.innerHTML = "Email ou senha incorretos"
             resposta.text().then((texto) => {
               console.error(texto);
-              // finalizarAguardar(texto);
+              finalizarAguardar(texto);
             });
           }
         })

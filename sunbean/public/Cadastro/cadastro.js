@@ -119,7 +119,7 @@ function validCadastro() {
       chk_termos.style.outline = "1px solid red";
       chk_termos.style.outlineOffset = "-1px";
     } else {
-
+      aguardar()
     /* Confirma o cadastro e abre a tela de monitoramento */
       input_tel.style.border = "none";
       input_senha.style.border = "none";
@@ -161,6 +161,7 @@ function validCadastro() {
             limparFormulario();
           } else {
             throw "Houve um erro ao tentar realizar o cadastro!";
+            finalizarAguardar();
           }
         })
         .catch(function (resposta) {
