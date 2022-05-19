@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="registros.css">
     <link rel="icon" type="imagem/png" href="../assets/Identidade Visual/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/funcoes.js"></script>
     <title>SunBean | Registros</title>
 </head>
 <!-- Start of sunbean Zendesk Widget script --><script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a2a87b3b-185f-4555-aa20-94e7f1934025"> </script><!-- End of sunbean Zendesk Widget script -->
-<body>
+<body onload="validarSessao()">
     <div class="lateral">
         <div class="container">
             <img class="foto" src="../assets/Identidade Visual/userbarbara.jpg">
@@ -25,7 +26,7 @@
                 <li><a href="../Plantações/plantacoes.html">Plantações</a></li>
                 <li><a href="../acesso/acesso.html">Acesso</a></li>
             </ul>
-            <div class="logout">
+            <div class="logout" onclick="limparSessao()">
                 <li><a href="../Login/login.html">Sair</a></li>
                 <img class="sair" src="../assets/Identidade Visual/iconelogout.png">
             </div>

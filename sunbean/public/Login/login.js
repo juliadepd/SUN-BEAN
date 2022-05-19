@@ -1,4 +1,7 @@
 function validLogin() {
+
+
+  // aguardar()
   /* verifica se há algum input vazio */
   if (input_email_login.value == "" || input_senha_login.value == "") {
     span_validacao.innerHTML = "Por favor preencha todos os campos";
@@ -73,22 +76,26 @@ function validLogin() {
 
               setTimeout(function () {
                 window.location.href = "../Monitoramento/monitoramento.html";
-              }, 500); // apenas para exibir o loading
+              }, 100); // apenas para exibir o loading
             });
           } else {
             console.log("Houve um erro ao tentar realizar o login!");
 
+
+            var spanval = document.getElementById("span_validacao")
+            spanval.innerHTML = "Email ou senha incorretos"
             resposta.text().then((texto) => {
               console.error(texto);
-              finalizarAguardar(texto);
+              // finalizarAguardar(texto);
             });
           }
         })
         .catch(function (erro) {
-          console.log(erro);
+          console.log("cheguei aqui" + erro);
         });
 
       return false;
+
     }
   }
 }

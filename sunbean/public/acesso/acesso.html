@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css global/estilo.css" />
     <link rel="icon" href="../assets/Identidade Visual/favicon.ico" />
     <script src="./acesso.js"></script>
+    <script src="../js/funcoes.js"></script>
     <title>SunBean | Acesso</title>
   </head>
   <!-- Start of sunbean Zendesk Widget script -->
@@ -16,7 +17,7 @@
     src="https://static.zdassets.com/ekr/snippet.js?key=a2a87b3b-185f-4555-aa20-94e7f1934025"
   ></script>
   <!-- End of sunbean Zendesk Widget script -->
-  <body>
+  <body onload="validarSessao()">
     <div class="lateral">
       <div class="container">
         <img
@@ -33,10 +34,10 @@
           <li><a href="../Plantações/plantacoes.html">Plantações</a></li>
           <li class="ativa">Acesso</li>
         </ul>
-        <div class="logout">
+        <div class="logout" onclick="limparSessao()">
           <li><a href="../Login/login.html">Sair</a></li>
-          <img class="sair" src="../assets/Identidade Visual/iconelogout.png" />
-        </div>
+          <img class="sair" src="../assets/Identidade Visual/iconelogout.png">
+      </div>
       </div>
     </div>
 

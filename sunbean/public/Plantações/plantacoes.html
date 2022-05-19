@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="plantacoes.css">
     <link rel="stylesheet" href="../css global/estilo.css">
     <link rel="icon" href="../assets/Identidade Visual/favicon.ico">
+    <script src="../js/funcoes.js"></script>
     <title>SunBean | Plantações</title>
 </head>
 <!-- Start of sunbean Zendesk Widget script -->
@@ -15,7 +16,7 @@
     src="https://static.zdassets.com/ekr/snippet.js?key=a2a87b3b-185f-4555-aa20-94e7f1934025"> </script>
 <!-- End of sunbean Zendesk Widget script -->
 
-<body>
+<body onload="validarSessao()">
     <div class="lateral">
         <div class="container">
             <img class="foto" src="../assets/Identidade Visual/user-soja-emporio.png">
@@ -28,7 +29,7 @@
                 <li class="ativa">Plantações</li>
                 <li><a href="../acesso/acesso.html">Acesso</a></li>
             </ul>
-            <div class="logout">
+            <div class="logout" onclick="limparSessao()">
                 <li><a href="../Login/login.html">Sair</a></li>
                 <img class="sair" src="../assets/Identidade Visual/iconelogout.png">
             </div>
