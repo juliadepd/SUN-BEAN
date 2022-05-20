@@ -18,6 +18,15 @@ function entrar(email, senha) {
     return database.executar(instrucao);
 }
 
+function esqueceu(email, cpf) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, cpf)
+    var instrucao = `
+        SELECT * FROM usuario WHERE email = '${email}' AND cpf_cnpj = '${cpf}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
 function cadastrar(nome, telefone, senha, cpf, email, fkTitular) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, telefone, senha, cpf, email);
@@ -62,10 +71,12 @@ function listarPlantacoes() {
     return database.executar(instrucao);
 }
 
+
 module.exports = {
     entrar,
     cadastrar,
     listarPlantacoes,
+    esqueceu,
     plantacao,
     novasenha,
     listar,

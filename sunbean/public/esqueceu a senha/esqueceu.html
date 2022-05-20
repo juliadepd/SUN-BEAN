@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css global/estilo.css" />
     <link rel="stylesheet" href="../esqueceu a senha/esqueceu.css" />
-    <link
+    <link 
       rel="icon"
       type="imagem/png"
       href="../assets/Identidade Visual/favicon.ico"
     />
+    <script src="esqueceu.js"></script>
     <title>Sunbean | Senha</title>
   </head>
   <!-- Start of sunbean Zendesk Widget script -->
@@ -60,12 +61,12 @@
             />
           </div>
 
-          <div class="senha">
-            <p class="texto_inputs">Telefone</p>
+          <div class="cpf">
+            <p class="texto_inputs">CPF</p>
             <input
-              id="input_senha_login"
+              id="input_cpf_login"
               class="input_texto"
-              placeholder="Inserir numero de telefone"
+              placeholder="Inserir seu CPF"
             />
           </div>
           <div class="LembrarUsuario_EsqueceuSenha">
@@ -75,7 +76,7 @@
           </div>
 
           <div>
-            <button id="btn_entrar" onclick="validLogin()">
+            <button id="btn_entrar" onclick="validEsqueceu()">
               Enviar Solicitação
             </button>
           </div>
@@ -131,13 +132,3 @@
     </div>
   </body>
 </html>
-<script>
-  function validLogin() {
-    if (input_email_login.value == "" || input_senha_login == "") {
-      alert("Por favor preencha todos os campos");
-    } else {
-      window.location.href =
-        "../Validação Esqueceu a senha/validação_esqueceu.html";
-    }
-  }
-</script>
