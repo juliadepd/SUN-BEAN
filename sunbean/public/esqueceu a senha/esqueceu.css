@@ -117,7 +117,20 @@
   color: #5bb553;
 }
 
-#btn_entrar {
+#validacao {
+  display: flex;
+  justify-content: center;
+}
+
+#span_validacao {
+  color: red;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#btn_senha {
   width: 100%;
   background-color: #5bb553;
   color: white;

@@ -1,7 +1,8 @@
 function validEsqueceu() {
-
+  aguardar()
   var emailVar = input_email_login.value;
   var cpfVar = input_cpf_login.value;
+  var spanval = document.getElementById("span_validacao")
 
   fetch("/usuarios/esqueceu", {
     method: "POST",
@@ -15,10 +16,11 @@ function validEsqueceu() {
   })
     .then(function (resposta) {
       console.log("ESTOU NO THEN DO entrar()!");
-      // finalizarAguardar();
+      finalizarAguardar();
 
       if (resposta.ok) {
         console.log(resposta);
+        spanval.innerHTML = ""
 
         resposta.json().then((json) => {
           console.log(json);
@@ -36,8 +38,8 @@ function validEsqueceu() {
         console.log("Houve um erro ao tentar realizar a alteração da senha!");
 
 
-        // var spanval = document.getElementById("span_validacao")
-        // spanval.innerHTML = "Email ou senha incorretos"
+
+        spanval.innerHTML = "Email ou CPF incorretos"
         resposta.text().then((texto) => {
           console.error(texto);
           // finalizarAguardar(texto);

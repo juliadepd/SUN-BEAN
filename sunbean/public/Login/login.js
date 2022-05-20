@@ -1,7 +1,5 @@
 function validLogin() {
 
-
-
   /* verifica se há algum input vazio */
   if (input_email_login.value == "" || input_senha_login.value == "") {
     span_validacao.innerHTML = "Por favor preencha todos os campos";
@@ -25,7 +23,7 @@ function validLogin() {
     }
   } else {
     /* tira as marcações das inputs já preenchidas */
-    input_email_login.border = "none";
+    input_email_login.style.border = "none";
     input_senha_login.style.border = "none";
 
     /* Valida se o email possui mais de 10 caracteres */
@@ -50,6 +48,7 @@ function validLogin() {
     /* Confirma o login e abre a tela de monitoramento */
       var emailVar = input_email_login.value;
       var senhaVar = input_senha_login.value;
+      var spanval = document.getElementById("span_validacao")
 
 
 
@@ -69,6 +68,7 @@ function validLogin() {
 
           if (resposta.ok) {
             console.log(resposta);
+            spanval.innerHTML = ""
 
             resposta.json().then((json) => {
               console.log(json);
@@ -85,9 +85,8 @@ function validLogin() {
           } else {
             console.log("Houve um erro ao tentar realizar o login!");
 
-
-            var spanval = document.getElementById("span_validacao")
             spanval.innerHTML = "Email ou senha incorretos"
+
             resposta.text().then((texto) => {
               console.error(texto);
               finalizarAguardar(texto);

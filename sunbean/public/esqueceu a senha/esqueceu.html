@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css global/estilo.css" />
     <link rel="stylesheet" href="../esqueceu a senha/esqueceu.css" />
+    <script src="../js/funcoes.js"></script>
     <link 
       rel="icon"
       type="imagem/png"
@@ -69,6 +70,11 @@
               placeholder="Inserir seu CPF"
             />
           </div>
+
+          <div id="validacao">
+            <span id="span_validacao"></span>
+          </div>
+
           <div class="LembrarUsuario_EsqueceuSenha">
             <span id="span_esqueceuSenha"
               ><a href="../Login/login.html">Lembrou sua senha?</a></span
@@ -76,9 +82,17 @@
           </div>
 
           <div>
-            <button id="btn_entrar" onclick="validEsqueceu()">
+            <button id="btn_senha" onclick="validEsqueceu()">
               Enviar Solicitação
             </button>
+          </div>
+
+          <div id="div_aguardar" class="loading-div">
+            <img src="../assets/Identidade Visual/circle-loading.gif" id="loading-gif">
+          </div>
+
+          <div id="div_erros_login">
+
           </div>
 
           <div class="div_cadastrar">

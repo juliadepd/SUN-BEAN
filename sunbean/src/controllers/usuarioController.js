@@ -160,7 +160,7 @@ function listarPlantacoes(req, res) {
 function esqueceu(req, res) {
     var email = req.body.emailServer;
     var cpf = req.body.cpfServer;
-    {
+    
         
         usuarioModel.esqueceu(email, cpf)
             .then(
@@ -182,7 +182,7 @@ function esqueceu(req, res) {
                     res.status(500).json(erro.sqlMessage);
                 }
             );
-    }
+    
 
 }
 
