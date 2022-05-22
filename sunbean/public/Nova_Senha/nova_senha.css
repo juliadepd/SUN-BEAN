@@ -46,7 +46,7 @@
 }
 
 .texto_inputs {
-  margin: 0;
+  margin: 10px 0 0 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -87,7 +87,6 @@
   color: #37474f;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  border-bottom: 1px solid #cacaca;
 }
 
 .LembrarUsuario_EsqueceuSenha {
@@ -135,8 +134,8 @@
   justify-content: center;
   margin-top: 20px;
   color: black;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #a_cadastrar {
@@ -168,4 +167,15 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 15px;
+}
+
+#span_validacao {
+  color: red;
+}
+
+#validacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }

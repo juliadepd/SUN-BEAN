@@ -183,6 +183,7 @@
 #nao_possui_conta {
   margin: 0;
   font-weight: 400;
+  font-size: 13px;
 }
 
 #a_cadastrar {
@@ -190,6 +191,7 @@
   margin-left: 10px;
   cursor: pointer;
   text-decoration: none;
+  font-size: 13px;
 }
 
 .container_right3 {
