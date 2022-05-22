@@ -17,7 +17,7 @@ function validCadastro() {
     input_repetir_senha.value == ""
   ) {
     span_validacao.innerHTML = "Por favor preencha todos os campos";
-    idcontainer2.style.marginTop = "-25px";
+
     texto_cadastro.style.marginBottom = "30px";
 
     /* marca o campo cpf/cnpj se estiver vazio */
@@ -127,6 +127,7 @@ function validCadastro() {
       input_nome_razao.style.border = "none";
       input_email.style.border = "none";
       input_cpf_cnpj.style.border = "none";
+      span_validacao.innerHTML = ''
 
       fetch("/usuarios/cadastrar", {
         method: "POST",

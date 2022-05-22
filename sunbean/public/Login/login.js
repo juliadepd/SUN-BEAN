@@ -49,6 +49,7 @@ function validLogin() {
       var emailVar = input_email_login.value;
       var senhaVar = input_senha_login.value;
       var spanval = document.getElementById("span_validacao")
+      span_validacao.innerHTML = ''
 
 
 
