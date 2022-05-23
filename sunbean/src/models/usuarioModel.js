@@ -41,12 +41,32 @@ function cadastrar(nome, telefone, senha, cpf, email, fkTitular) {
     return database.executar(instrucao);
 }
 
-function plantacao(nome, hectares, cep, numero) {
+function plantacao(nome, hectares, cep, numero, id) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, hectares, cep, numero);
     
     var instrucao = `
             insert into plantacao (nome, cep, numero, qtdHectares) values
-            ('${nome}','${cep}','${numero}','${hectares}');
+            ('${nome} - ${id}','${cep}','${numero}','${hectares}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function Autenticarplantacao(id , nome) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
+    var instrucao = `
+        SELECT * FROM plantacao WHERE nome = '${nome} - ${id}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrarPlantacao(nome, hectares, cep, numero, id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, hectares, cep, numero);
+    
+    var instrucao = `
+            insert into cliente_plantacao (nome, cep, numero, qtdHectares) values
+            ('${nome} - ${id}','${cep}','${numero}','${hectares}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -78,6 +98,8 @@ module.exports = {
     listarPlantacoes,
     esqueceu,
     plantacao,
+    Autenticarplantacao,
+    cadastrarPlantacao,
     novasenha,
     listar,
 };

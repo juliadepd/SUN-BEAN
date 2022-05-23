@@ -94,10 +94,59 @@ function plantacao(req, res) {
     var hectares = req.body.qtdHectaresServer;
     var cep = req.body.cepServer;
     var numero = req.body.numeroServer;
+    var id = req.body.idPlantacaoServer;
 
   
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.plantacao(nome, hectares, cep, numero)
+        usuarioModel.plantacao(nome, hectares, cep, numero, id)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+}
+
+function Autenticarplantacao(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var id = req.body.idPlantacaoServer;
+    var nome = req.body.UsuarioServer;
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.Autenticarplantacao(id, nome)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+}
+
+function cadastrarPlantacao(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nome = req.body.nomeServer;
+    var hectares = req.body.qtdHectaresServer;
+ 
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrarPlantacao(nome, hectares, cep, numero, id)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -190,6 +239,8 @@ module.exports = {
     entrar,
     cadastrar,
     plantacao,
+    Autenticarplantacao,
+    cadastrarPlantacao,
     esqueceu,
     novasenha,
     listar,
