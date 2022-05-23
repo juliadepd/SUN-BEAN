@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css global/estilo.css" />
   <link rel="stylesheet" href="../Nova_Senha/nova_senha.css" />
+  <script src="../js/funcoes.js"></script>
   <script src="nova_senha.js"></script>
   <link rel="icon" type="imagem/png" href="../assets/Identidade Visual/favicon.ico" />
   <title>Sunbean | Senha</title>
@@ -72,6 +73,10 @@
             <b>ENTRAR</b>
           </button>
 
+          <div id="div_aguardar" class="loading-div">
+            <img src="../assets/Identidade Visual/circle-loading.gif" id="loading-gif">
+          </div>
+
         <div class="div_cadastrar">
           Não possui uma conta ainda?
           <a href="../Cadastro/cadastro.html" id="a_cadastrar">Faça parte da Sunbean</a>
@@ -113,49 +118,6 @@
 
 </html>
 <script>
-  function validSenha() {
-    var emailVar = input_email.value;
-    var senhaVar = input_senha.value;
-
-    //   if (emailVar == '' || senhaVar == '') {
-    // alert('Por favor preencha todos os campos')
-    // }else{
-
-    fetch("/usuarios/novasenha", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-          //cardErro.style.display = "block";
-
-          alert("Senha atualizada com sucesso!!");
-
-          setTimeout(() => {
-            window.location.href = "../Login/login.html";
-          }, "2000");
-
-          limparFormulario();
-        } else {
-          throw "Houve um erro ao tentar atualizar senha!...";
-          console.log(resposta);
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-
-    return false;
-  }
-  // }
+    var usuario = sessionStorage.getItem('NOME_USUARIO')
+    texto_login.innerHTML = `Por favor, digite a <b>Nova senha.<br> Sr.(a) ${usuario[0].toLocaleUpperCase() + usuario.substr(1)}</b>` // esta formatado para a primeira letra ser Maiuscula
 </script>

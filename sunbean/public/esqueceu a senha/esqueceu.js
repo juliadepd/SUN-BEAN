@@ -4,6 +4,8 @@ function validEsqueceu() {
   var cpfVar = input_cpf_login.value;
   var spanval = document.getElementById("span_validacao")
 
+  spanval.innerHTML = ""
+
   fetch("/usuarios/esqueceu", {
     method: "POST",
     headers: {
@@ -36,9 +38,6 @@ function validEsqueceu() {
         });
       } else {
         console.log("Houve um erro ao tentar realizar a alteração da senha!");
-
-
-
         spanval.innerHTML = "Email ou CPF incorretos"
         resposta.text().then((texto) => {
           console.error(texto);

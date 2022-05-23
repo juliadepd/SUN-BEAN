@@ -7,6 +7,8 @@ function validCadastro() {
   var confirmacaoSenhaVar = input_repetir_senha.value;
   var idUsuarioLogado = sessionStorage.getItem("ID_USUARIO");
 
+  span_validacao.innerHTML = ""
+
   /* Verifica se há algum input com valor vazio e ajusta o layout para o texto caber na tela caso houver */
   if (
     input_nome_razao.value == "" ||
@@ -157,7 +159,7 @@ function validCadastro() {
 
             setTimeout(() => {
               window.location.href = "../Login/login.html";
-            }, "2000");
+            }, "100");
 
             limparFormulario();
           } else {

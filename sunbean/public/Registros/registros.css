@@ -6,7 +6,7 @@ body {
 .lateral {
   background-color: #5bb553;
   width: 15%;
-  height: 600px;
+  height: 100vh;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 10px;
   float: left;
@@ -54,7 +54,7 @@ body {
   margin: 0%;
 }
 
-.navbar {
+.navbarra {
   width: 100%;
   height: 30%;
   display: flex;
@@ -67,16 +67,28 @@ body {
   margin-left: 10px;
 }
 
-.lateral .navbar a:hover {
-  transition: 0.7s;
-  font-weight: bolder;
-  font-size: +19px;
+li a {
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 0%;
 }
 
-.active {
+.navbarra li a:hover {
+  transition: 0.3s;
+  background-color: #ffffff23;
+  font-weight: bolder;
+}
+
+.ativa {
   font-weight: bolder;
   font-size: large;
   font-size: 15px;
+  background-color: #ffffff23;
+  padding: 10px;
+  font-weight: bolder;
+  border-radius: 20px;
+  margin: 0%;
+  color: rgb(255, 255, 255);
 }
 
 .logout {
