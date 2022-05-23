@@ -29,12 +29,11 @@ fkPlantacao int,
 foreign key (fkPlantacao) references plantacao(idPlantacao));
 
 -- tebela associativa
-create table Matricula(
-idMatricula int primary key auto_increment,
+create table cliente_plantacao(
+idCliente_Plant int auto_increment,
 fkUsuario int,
 fkPlantacao int,
-foreign key (fkUsuario) references usuario(idUsuario),
-foreign key (fkPlantacao) references plantacao(idPlantacao));
+primary key (idCliente_Plant, fkUsuario, fkPlantacao));
 
 -- tabela medida
 create table medida(

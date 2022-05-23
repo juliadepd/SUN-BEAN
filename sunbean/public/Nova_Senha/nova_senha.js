@@ -83,6 +83,7 @@ function validNovaSenha() {
           
                 if(emailVar != sessionStorage.getItem('EMAIL_USUARIO')){
                 span_validacao.innerHTML = "Email incorreto"
+                input_email.style.border = "thin solid red"
                 finalizarAguardar();
                 }
 

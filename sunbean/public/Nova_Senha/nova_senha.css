@@ -171,6 +171,7 @@
 
 #span_validacao {
   color: red;
+  margin-bottom: -10px;
 }
 
 #validacao {
@@ -178,4 +179,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+}
+
+.loading-div {
+  margin-top: 10px;
+  margin-bottom: -15px;
 }
