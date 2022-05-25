@@ -1,0 +1,10 @@
+{
+  "name": "projeto-acquatec",
+  "version": "1.0.0",
+  "description": "",
+  "private":true,
+  "scripts": {
+    "start": "node ./Site/app.js",
+    "postinstall": "cd Site && npm install"
+  }
+}
