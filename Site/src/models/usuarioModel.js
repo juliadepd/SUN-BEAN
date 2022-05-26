@@ -65,26 +65,16 @@ function plantacao(nome, hectares, cep, numero, id) {
     return database.executar(instrucao);
 }
 
-function Autenticarplantacao(id , nome) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
-    var instrucao = `
-        SELECT * FROM plantacao WHERE nome = '${nome} - ${id}';
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
-
-function cadastrarPlantacao(nome, hectares, cep, numero, id) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, hectares, cep, numero);
+function cadastrarAssociativa(nome,id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, id);
     
     var instrucao = `
-            insert into cliente_plantacao (nome, cep, numero, qtdHectares) values
-            ('${nome} - ${id}','${cep}','${numero}','${hectares}');
+            insert into cliente_plantacao
+            values ${id}, (SELECT idPlantacao from plantacao where nome = '${nome}'))
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
-
 
 
 function novasenha(email, senha) {
@@ -100,7 +90,8 @@ function novasenha(email, senha) {
 function listarPlantacoes() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        SELECT * FROM plantacao;
+        select * from plantacao join cliente_plantacao on idPlantacao = fkPlantacao 
+        join usuario on idUsuario = fkUsuario;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -114,8 +105,7 @@ module.exports = {
     listarPlantacoes,
     esqueceu,
     plantacao,
-    Autenticarplantacao,
-    cadastrarPlantacao,
+    cadastrarAssociativa,
     novasenha,
     listar,
 };

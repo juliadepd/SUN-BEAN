@@ -32,14 +32,9 @@ router.post("/plantacao", function (req, res) {
     usuarioController.plantacao(req, res);
 });
 
-router.post("/Autenticarplantacao", function (req, res) {
-    usuarioController.Autenticarplantacao(req, res);
+router.post("/cadastrarAssociativa", function (req, res) {
+    usuarioController.cadastrarAssociativa(req, res);
 });
-
-router.post("/cadastrarPlantacao", function (req, res) {
-    usuarioController.cadastrarPlantacao(req, res);
-});
-
 
 router.post("/novasenha", function (req, res) {
     usuarioController.novasenha(req, res);
