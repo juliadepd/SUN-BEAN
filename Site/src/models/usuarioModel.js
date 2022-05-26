@@ -41,6 +41,19 @@ function cadastrar(nome, telefone, senha, cpf, email, fkTitular) {
     return database.executar(instrucao);
 }
 
+function acesso(nome, telefone, senha, cpf, email, fkTitular) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, telefone, senha, cpf, email);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        insert into usuario (nome_rs, cpf_cnpj, telefone, email, senha, fkTitular) values 
+        ('${nome}','${cpf}','${telefone}', '${email}','${senha}', ${fkTitular});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 function plantacao(nome, hectares, cep, numero, id) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, hectares, cep, numero);
     
@@ -72,6 +85,8 @@ function cadastrarPlantacao(nome, hectares, cep, numero, id) {
     return database.executar(instrucao);
 }
 
+
+
 function novasenha(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function validSenha():", senha);
     
@@ -95,6 +110,7 @@ function listarPlantacoes() {
 module.exports = {
     entrar,
     cadastrar,
+    acesso,
     listarPlantacoes,
     esqueceu,
     plantacao,
