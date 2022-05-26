@@ -143,7 +143,8 @@ li a {
 .ola {
   background-color: rgb(255, 255, 255);
   height: 50px;
-  width: 45%;
+  width: auto;
+  max-width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;

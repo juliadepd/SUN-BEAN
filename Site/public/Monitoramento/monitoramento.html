@@ -11,9 +11,13 @@
   <link rel="icon" type="imagem/png" href="../assets/Identidade Visual/favicon.ico" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../js/funcoes.js"></script>
+  <script src="monitoramento.js"></script>
   <title>Sunbean | Monitoramento</title>
 </head>
-<!-- Start of sunbean Zendesk Widget script --><script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a2a87b3b-185f-4555-aa20-94e7f1934025"> </script><!-- End of sunbean Zendesk Widget script -->
+<!-- Start of sunbean Zendesk Widget script -->
+<script id="ze-snippet"
+  src="https://static.zdassets.com/ekr/snippet.js?key=a2a87b3b-185f-4555-aa20-94e7f1934025"> </script>
+<!-- End of sunbean Zendesk Widget script -->
 
 <body onload="validarSessao()">
   <div class="lateral">
@@ -44,100 +48,70 @@
       <h4>Olá, <b>Emporio da Soja</b>. Seja bem-vindo(a)!</h4>
     </div>
 
+    <input id="ipt_temp" onkeyup="teste1()">
+    <input id="ipt_umid" onkeyup="teste2()">
+
     <div class="container">
-      <div class="temporeal">
-        <div class="div_dashboard">
-          <div>
-            <canvas id="grafico_linha" style="position: relative; height:80vh; width:40vw"></canvas>
+
+      <div class="medidas_plantacao">
+
+        <div class="div_alertas">
+
+          <div class="container">
+            <span id="medida_temp">
+              ºC
+            </span>
+
+            <img src="../assets/Identidade Visual/icon-temp.png" class="icone_termometro" >
+          </div>
+
+          <div id="tooltip_temp">
+
+            <h1>
+              TEMPERATURA
+            </h1>
+
+            <span id="text_temp">
+              Sem fonte de dados 
+            </span>
+
+            <img src="../assets/Identidade Visual/alerta.png" class="alerta" id="temp_alerta">
           </div>
         </div>
 
-        <div class="div_dashboard">
-          <div>
-            <canvas id="grafico_barra" style="position: relative; height:80vh; width: 40vw"></canvas>
+        <div class="div_alertas">
+
+          <div class="container">
+
+            <span id="medida_umid">
+              %
+            </span>
+
+            <img src="../assets/Identidade Visual/icon-umid.png" class="icone_termometro">
+
+          </div>
+
+          <div id="tooltip_umid">
+
+            <h1>
+              UMIDADE
+            </h1>
+
+            <div id="text_umid">
+              Sem fonte de dados  
+            </div>
+
+            <img src="../assets/Identidade Visual/alerta.png" class="alerta" id="umid_alerta">
           </div>
         </div>
 
-        <div class="tooltip_temp">
-
-          <h1>
-            TEMPERATURA
-          </h1>
-
-          <span class="text_temp">
-            Risco de ultrapassagem do limite!
-          </span>
-
-          <img src="../assets/Identidade Visual/alerta.png" class="alerta">
-
-        </div>
-
-        <div class="estado2">
-          <h1>UMIDADE</h1>
-          <a href=""></a>
-          <div class="info_umid">5 gramas abaixo do adequado!</div>
-          <img src="../assets/Identidade Visual/alerta.png" class="alerta">
-        </div>
-
       </div>
-      <div class="embaixo">
-        <div class="div_compreenda">
-          <h1>
-            Realize a irrigação e registre o alerta em: <a href="../Registros/registros.html">Registros</a>
-          </h1>
-        </div>
+
+      <div class="nome_plantio">
+        <h3>Plantio 1</h3>
       </div>
+
     </div>
 </body>
 
 </html>
-
-<script>
-  const horario = [
-    '13:35'
-  ];
-
-
-  const dataLinha = {
-    labels: horario,
-    datasets: [{
-      label: 'Temperatura agora',
-      backgroundColor: '#3d7738',
-      borderColor: '#3d7738',
-      data: [29, 23, 32,],
-    }]
-  };
-
-  const dataBarra = {
-    labels: horario,
-    datasets: [{
-      label: 'Umidade agora',
-      backgroundColor: 'rgb(8, 92, 74)',
-      borderColor: 'rgb(8, 92, 74)',
-      data: [45, 43, 50],
-    }]
-  };
-
-  const configLinha = {
-    type: 'line',
-    data: dataLinha,
-    options: {}
-  };
-  const configBarra = {
-    type: 'line',
-    data: dataBarra,
-    options: {}
-  };
-</script>
-
-<script>
-  const grafico_linha = new Chart(
-    document.getElementById('grafico_linha'),
-    configLinha
-  );
-
-  const grafico_barra = new Chart(
-    document.getElementById('grafico_barra'),
-    configBarra
-  );
-</script>
