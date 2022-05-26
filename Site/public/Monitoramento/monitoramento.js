@@ -19,7 +19,7 @@ function teste1() {
         temp_alerta.style = "width: 90px; margin-top: 18px; margin-bottom: 5px"
 
     }
-    else if (temperatura_real > 80) {
+    else if (temperatura_real > 30) {
         tooltip_temp.style = "background-color: red"
         text_temp.innerHTML = `${acima}ºC acima do limite`
         temp_alerta.src = "../assets/Identidade Visual/alerta.png" 
