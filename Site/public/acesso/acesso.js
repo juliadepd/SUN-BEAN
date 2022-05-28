@@ -1,18 +1,19 @@
 function validCadastro() {
-  var nome = input_nome.value;
-  var sobrenome = input_sobrenome.value;
-  var email = input_email.value;
-  var cpf = input_cpf.value;
-  var senha = input_senha.value;
+  var nomeVar = input_nome.value;
+  var telefoneVar = input_telefone.value;
+  var emailVar = input_email.value;
+  var cpfVar = input_cpf.value;
+  var senhaVar = input_senha.value;
   var confirmarSenha = input_confirmarSenha.value;
+  var idUsuarioLogado = sessionStorage.getItem("ID_USUARIO");
 
   /* Verifica se há algum input com valor vazio e ajusta o layout para o texto caber na tela caso houver */
   if (
-    nome == "" ||
-    sobrenome == "" ||
-    email == "" ||
-    cpf == "" ||
-    senha == "" ||
+    nomeVar== "" ||
+    telefoneVar== "" ||
+    emailVar == "" ||
+    cpfVar == "" ||
+    senhaVar == "" ||
     confirmarSenha == ""
   ) {
     span_validacao.style.marginBottom = "-30px";
@@ -20,7 +21,7 @@ function validCadastro() {
     span_validacao.innerHTML = "Por favor preencha todos os campos";
 
     /* marca o campo cpf se estiver vazio */
-    if (cpf != "") {
+    if (cpfVar != "") {
       input_cpf.style.border = "none";
     } else {
       input_cpf.style.border = "thin solid #FF0000";
@@ -56,14 +57,14 @@ function validCadastro() {
 
     /* marca o campo sobrenome se estiver vazio */
     if (sobrenome != "") {
-      input_sobrenome.style.border = "none";
+      input_telefone.style.border = "none";
     } else {
-      input_sobrenome.style.border = "thin solid #FF0000";
+      input_telefone.style.border = "thin solid #FF0000";
     }
   } else {
     /* tira as marcações das inputs já preenchidas */
     input_nome.style.border = "none";
-    input_sobrenome.style.border = "none";
+    input_telefone.style.border = "none";
     input_cpf.style.border = "none";
     input_email.style.border = "none";
     input_senha.style.border = "none";
@@ -84,10 +85,10 @@ function validCadastro() {
       /* Valida se o nome possui mais de 6 caracteres */
       input_nome.style.border = "thin solid #FF0000";
       span_validacao.innerHTML = "Nome deve conter no mínimo 6 digitos";
-    } else if (input_sobrenome.value.length < 3) {
+    } else if (input_telefone.value.length < 3) {
 
       /* Valida se o campo sobrenome possui mais de 3 caracteres */
-      input_sobrenome.style.border = "thin solid #FF0000";
+      input_telefone.style.border = "thin solid #FF0000";
       span_validacao.innerHTML = "Sobrenome deve conter no mínimo 3 digitos";
     } else if (input_cpf.value.length !== 11) {
 
@@ -113,7 +114,7 @@ function validCadastro() {
       span_validacao.style.marginTop = "10px";
 
       input_nome.style.border = "none";
-      input_sobrenome.style.border = "none";
+      input_telefone.style.border = "none";
       input_cpf.style.border = "none";
       input_email.style.border = "none";
       input_senha.style.border = "none";
@@ -122,6 +123,49 @@ function validCadastro() {
       // Alterar essa parte quando for conectar a API
       span_validacao.innerHTML = "Cadastro ok, aguardando conexão com a API";
       span_validacao.style.color = "green";
+
+      fetch("/usuarios/acesso", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          telefoneServer: telefoneVar,
+          emailServer: emailVar,
+          cpfServer: cpfVar,
+          senhaServer: senhaVar,
+          fkTitularServer: idUsuarioLogado
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+            //cardErro.style.display = "block";
+
+            alert(
+              "Cadastro realizado com sucesso! Redirecionando para tela de Login..."
+            );
+
+            setTimeout(() => {
+              window.location.href = "../Login/login.html";
+            }, "100");
+
+            limparFormulario();
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+            finalizarAguardar();
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+        });
+
+      return false;
+
     }
   }
 }

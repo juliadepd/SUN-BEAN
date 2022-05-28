@@ -77,6 +77,7 @@ li a {
   background-color: #ffffff23;
   font-weight: bolder;
 }
+
 .ativa {
   font-weight: bolder;
   font-size: 15px;
@@ -121,12 +122,10 @@ li a {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.096),
-    #c4c4c4,
-    rgb(255, 255, 255)
-  );
+  background-image: linear-gradient(to left,
+      rgba(0, 0, 0, 0.096),
+      #c4c4c4,
+      rgb(255, 255, 255));
 }
 
 .idvisual {
@@ -168,37 +167,69 @@ li a {
   width: 95%;
   margin-left: 30px;
   margin-top: 85px;
-}
-
-/* dashboards */
-
-.container .div_dashboard {
   display: flex;
-  width: 20%;
-  height: 50%;
   flex-direction: column;
-  border-radius: 3px;
-  margin-right: 15px;
-  background-color: white;
-  box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
+  align-items: center;
+  justify-content: center;
+
 }
 
-.temporeal {
+.div_alertas {
   display: flex;
-  width: 100%;
-  align-items: center;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.473);
-  padding-bottom: 15px;
+  align-items: flex-end;
   justify-content: center;
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.205);
+  height: 200px;
+  padding-bottom: 30px;
+  margin-left: 45px;
 }
 
-.tooltip_temp {
+.div_alertas span {
+  font-size: 45px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.div_alertas .container {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-right: 50px;
+}
+
+.icone_termometro {
+  width: 100px;
+}
+
+.alerta {
+  width: 90px;
+  margin-top: 18px;
+}
+
+.medidas_plantacao {
+  display: flex;
+}
+
+.nome_plantio {
+  border-bottom: 1px solid #2e2e2e63; 
+  height: 35px;
+  width: 90%;
+  margin-right: 90px;
+  margin-top: -20px;
+  color: rgba(0, 0, 0, 0.788);
+}
+
+h3 {
+  font-size: x-large;
+  margin: 0%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#tooltip_temp {
   position: relative;
-  border-bottom: 1px dotted black;
-  background-color: rgba(255, 153, 0, 0.685);
-  height: 195px;
-  width: 200px;
+  background-color: #17a51200;
+  height: 160px;
+  width: 160px;
   border-radius: 3px;
   margin-right: 15px;
   display: flex;
@@ -206,9 +237,10 @@ li a {
   align-items: center;
   flex-direction: column;
   box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
+  margin-bottom: 0%;
 }
 
-.tooltip_temp .text_temp {
+#text_temp {
   visibility: hidden;
   width: 130px;
   background-color: black;
@@ -219,86 +251,58 @@ li a {
   position: absolute;
   z-index: 1;
   bottom: 90%;
-  left: 70%;
-  margin-left: -60px;
+  left: 30%;
   opacity: 0%;
   transition: opacity 0.5s;
+  width: 150px;
+  font-size: large;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.tooltip_temp:hover .text_temp {
+#tooltip_temp:hover #text_temp {
   visibility: visible;
   opacity: 1;
 }
 
-.estado2 {
-  background-color: rgba(255, 0, 0, 0.637);
-  height: 195px;
-  width: 200px;
-  border-radius: 3px;
-  margin-right: 15px;
+#tooltip_umid {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
+  background-color: #17a51200;
+  height: 160px;
+  width: 160px;
+  border-radius: 3px;
+  margin-right: 15px;
 }
 
-.alerta {
-  width: 100px;
-  margin-top: 20px;
+#text_umid {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  opacity: 0%;
+  transition: opacity 0.5s;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  bottom: 90%;
+  left: 30%;
+  width: 150px;
+  font-size: large;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#tooltip_umid:hover #text_umid {
+  visibility: visible;
+  opacity: 1;
 }
 
 h1 {
-  font-size: large;
-}
-
-.info_umid {
-  display: none;
-  font-size: small;
-  height: 0px;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  margin-left: 200px;
-  width: 200px;
-}
-
-.estado2:hover .info_umid {
-  display: block;
-}
-
-.embaixo {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.div_compreenda {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  margin-right: 20px;
-  height: 100px;
-  width: 700px;
-  background-color: #e9e9e9;
-  box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
-  border-radius: 5px;
-  background-color: #5bb553;
-  color: white;
-}
-
-.div_compreenda h1 {
-  font-weight: 500;
-  font-size: larger;
-  margin: 0%;
-  float: left;
-  list-style: none;
-  list-style-type: none;
-  text-decoration: none;
-  display: inline;
-}
-
-.div_compreenda a {
-  color: white;
+  font-size: medium;
 }

@@ -179,81 +179,45 @@
 
             if (resposta.ok) {
                 //cardErro.style.display = "block";
+            fetch("/usuarios/cadastrarAssociativa", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
 
-            fetch("/usuarios/Autenticarplantacao", { // fetch de select no id usuario
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
+                idUsuarioLogadoServer: idPlantacaoVar,
+                nomeServer: nomeVar
 
-                idPlantacaoServer: idPlantacaoVar,
-                UsuarioServer: usuario
-
+              }),
             })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                //cardErro.style.display = "block";
-
-        fetch("/usuarios/cadastrarPlantacao", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          // crie um atributo que recebe o valor recuperado aqui
-          // Agora vá para o arquivo routes/usuario.js
-          nomeServer: nomeVar,
-
-        }),
-      })
-        .then(function (resposta) {
-          console.log("resposta: ", resposta);
-
-          if (resposta.ok) {
-            //cardErro.style.display = "block";
-
-            alert(
-              "insert na tabela associativa com id da session"
-            );
-
-            setTimeout(() => {
-              window.location.href = "../Login/login.html";
-            }, "100");
-
-            limparFormulario();
-          } else {
-            throw "Houve um erro ao tentar realizar o cadastro!";
-            finalizarAguardar();
-          }
-        })
-        .catch(function (resposta) {
-          console.log(`#ERRO: ${resposta}`);
-        });
-
-      return false;
-
-                alert("select * plantacao com id associativa");
-
-                setTimeout(() => {
-                    window.location.reload()
-                }, "100")
-
-                limparFormulario();
-
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-
-        });
-
-        return false;
-
+              .then(function (resposta) {
+                console.log("resposta: ", resposta);
+      
+                if (resposta.ok) {
+                  //cardErro.style.display = "block";
+      
+                  alert(
+                    "Cadastro realizado com sucesso! Redirecionando para tela de Login..."
+                  );
+      
+                  setTimeout(() => {
+                    window.location.href = "../Login/login.html";
+                  }, "100");
+      
+                  limparFormulario();
+                } else {
+                  throw "Houve um erro ao tentar realizar o cadastro!";
+                  finalizarAguardar();
+                }
+              })
+              .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+              });
+      
+            return false;
                 alert("Cadastro da plantação realizado com sucesso!");
 
                 setTimeout(() => {

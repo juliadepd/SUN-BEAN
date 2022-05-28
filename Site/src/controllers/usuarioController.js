@@ -88,6 +88,58 @@ function cadastrar(req, res) {
     
 }
 
+function cadastrarAssociativa(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nome = req.body.nomeServer;
+    var id = req.body.idUsuarioLogadoServer;
+  
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrarAssociativa(nome, id)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+}
+
+function acesso(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nome = req.body.nomeServer;
+    var telefone = req.body.telefoneServer;
+    var email = req.body.emailServer;
+    var cpf = req.body.cpfServer;
+    var senha = req.body.senhaServer;
+    var fkTitular = req.body.fkTitularServer;
+  
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.acesso(nome, telefone, senha, cpf, email, fkTitular)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+}
+
 function plantacao(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
@@ -238,9 +290,9 @@ function esqueceu(req, res) {
 module.exports = {
     entrar,
     cadastrar,
+    cadastrarAssociativa,
+    acesso,
     plantacao,
-    Autenticarplantacao,
-    cadastrarPlantacao,
     esqueceu,
     novasenha,
     listar,
