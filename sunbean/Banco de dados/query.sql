@@ -1,5 +1,5 @@
 create table usuario (
-idUsuario int primary key identity(1,1),
+idUsuario int primary key identity,
 nome_Ra varchar(45),
 cpf_cnpj varchar(14),
 telefone varchar(11),
@@ -11,33 +11,33 @@ foreign key(fkTitular) references usuario(idUsuario));
 
 -- tabela plantação
 create table plantacao(
-idPlantacao int primary key identity(10,1),
-nomePlantaca varchar(45),
+idPlantacao int primary key identity,
+nome varchar(45),
 cep char(8),
 numero int,
-qtdHequitares int);
+qtdHectares int);
 
 -- tabela sensor
 create table sensor (
-idSensor int primary key identity(100,1),
+idSensor int primary key identity,
 fkPlantacao int,
 foreign key (fkPlantacao) references plantacao(idPlantacao));
 
 -- tebela associativa
-create table chamado(
+create table cliente_plantacao(
 fkUsuario int,
-fkPlantacao int,
-dt_acesso varchar(45),
-atividade varchar(45),
+fkPlantacao int identity,
 foreign key (fkUsuario) references usuario(idUsuario),
-foreign key (fkPlantacao) references plantacao(idPlantacao));
+foreign key (fkPlantacao) references plantacao(idPlantacao),
+primary key(fkUsuario,fkPlantacao)
+);
 
 -- tabela medida
 create table medida(
-idMedida int primary key identity(200,1),
+idMedida int primary key identity,
 temperatura decimal,
 umidade decimal,
-dthora datetime,
+data_hora datetime default current_timestamp,
 fkSensor int,
 fkPlantacao int,
 foreign key (fkPlantacao) references plantacao(idPlantacao),

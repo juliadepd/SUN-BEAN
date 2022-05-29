@@ -78,7 +78,7 @@ router.post('/sendData', (request, response) => {
     // let lugar = 'dev';
     let lugar = 'prod';
       if(lugar == 'prod'){
-        sql = `Insert INTO medida(fkSensor, fkPlantacao, temperatura, umidade) VALUES(1,10, '${temperatura}', ${umidade})`;
+        sql = `Insert INTO medida(fkSensor, fkPlantacao, temperatura, umidade) VALUES(1,1, '${temperatura}', ${umidade})`;
           getConnAzure(sql).then(val=>console.log(val))
       }else{
           connection.query(sql, values, function(err, result){
