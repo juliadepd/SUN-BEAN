@@ -22,10 +22,10 @@
     <!-- onload="validarSessao()" -->
     <div class="lateral">
         <div class="container">
-            <img class="foto" src="../assets/Identidade Visual/userbarbara.jpg">
-            <div class="username">
-                <h1>Barbara Ferrari</h1>
-                <h2>Usuário Secundário</h2>
+            <img class="foto" src="../assets/Identidade Visual/usuario.jpg">
+            <div id="username">
+                <h1>Usuario</h1>
+                <!-- <h2>Usuário Secundário</h2> -->
             </div>
             <ul class="navbarra">
                 <li><a href="../Monitoramento/monitoramento.html">Monitoramento</a></li>
@@ -44,7 +44,7 @@
         <div class="ola">
             <img class="idvisual" src="../assets/Identidade Visual/Logo PNG.png">
             <div class="separador"></div>
-            <h4>Olá, <b>Barbara</b>. Seja bem-vindo(a)!</h4>
+            <h4 id="bemvindo"></h4>
         </div>
 
         <div class="container">
@@ -91,6 +91,12 @@
 </body>
 
 </html>
+
+<script>
+    var usuario = sessionStorage.getItem('NOME_USUARIO')
+    username.innerHTML = usuario[0].toLocaleUpperCase() + usuario.substr(1); // esta formatado para a primeira letra ser Maiuscula
+    bemvindo.innerHTML = `Olá, <b>${usuario[0].toLocaleUpperCase() + usuario.substr(1)}</b>. Seja bem-vindo(a)!`
+</script>
 
 <script>
     let proximaAtualizacao;

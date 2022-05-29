@@ -69,8 +69,8 @@ function cadastrarAssociativa(nome,id) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, id);
     
     var instrucao = `
-            insert into cliente_plantacao
-            values ${id}, (SELECT idPlantacao from plantacao where nome = '${nome}'))
+            insert into cliente_plantacao(fkUsuario)values
+            ('${id}') (SELECT idPlantacao from plantacao where nome = '${nome}')
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -90,8 +90,8 @@ function novasenha(email, senha) {
 function listarPlantacoes() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        select * from plantacao join cliente_plantacao on idPlantacao = fkPlantacao 
-        join usuario on idUsuario = fkUsuario;
+            select * from plantacao join cliente_plantacao on idPlantacao = fkPlantacao 
+            join usuario on idUsuario = fkUsuario where idUsuario = 1;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
