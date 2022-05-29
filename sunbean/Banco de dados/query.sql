@@ -19,7 +19,7 @@ qtdHequitares int);
 
 -- tabela sensor
 create table sensor (
-idSensor int primary key identity(100,1),
+idSensor int primary key identity,
 fkPlantacao int,
 foreign key (fkPlantacao) references plantacao(idPlantacao));
 
@@ -34,10 +34,10 @@ foreign key (fkPlantacao) references plantacao(idPlantacao));
 
 -- tabela medida
 create table medida(
-idMedida int primary key identity(200,1),
+idMedida int primary key identity,
 temperatura decimal,
 umidade decimal,
-dthora datetime,
+data_hora datetime default current_timestamp,
 fkSensor int,
 fkPlantacao int,
 foreign key (fkPlantacao) references plantacao(idPlantacao),
